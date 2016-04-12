@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import "_parameter";
+
+// breadcrumb
+.breadcrumb {
+}
+
+.breadcrumb ul {
+	list-style: none;
+	padding: 0;
+}
+
+.breadcrumb li {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.breadcrumb li:not(:last-child)::after {
+	content: $breadcrumb;
+	margin-left: 0.5em;
+}
+
+.breadcrumb a:link, .breadcrumb a:visited {
+	color: $color_text;
+}
+
+.breadcrumb a:hover, .breadcrumb a:active {
+	color: $color_link;
+}
+

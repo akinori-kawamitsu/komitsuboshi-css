@@ -1,0 +1,33 @@
+/* decoration css */
+.border {
+  border: #666 1px solid;
+  padding: 10px;
+}
+
+.shadow {
+  box-shadow: #666 1px 1px 1px;
+}
+
+.gnav li {
+  width: 100%;
+  border-bottom: 1px solid #9C590B;
+}
+.gnav li:not(:last-child) {
+  border-right: 1px solid #9C590B;
+}
+
+.gnav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #FFB76E;
+  color: #333;
+  line-height: 1;
+  padding: 5px 3px;
+}
+
+.gnav a:hover, .gnav a:active {
+  text-decoration: none;
+  border: none;
+}

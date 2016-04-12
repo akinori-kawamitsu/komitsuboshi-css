@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../src/style.css" />
+        <title>kicss test</title>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+		  $(function(){
+			  $("#header").load("header.html");
+		  })
+		</script>
+    </head>
+    <body>
+      <div class="header" id="header">
+      </div><!-- header -->
+        <div class="container">
+	        <h1>kicss動作テストファイル</h1>
+        	<section>
+       			<h2>コンセプト</h2>
+       			<ul>
+       				<li>Bootstrapっぽいグリッドシステム</li>
+       				<li>Bootstrapほどブレイクポイントは細かくない。スマートフォン（sp）、タブレット（tab）、パソコンモニタ（pc）の3段階</li>
+       				<li>グリッド間の余白を、固定値（px）で指定できる。また、sp,tab,pcでそれぞれ余白を設定できる</li>
+       				<li>モバイルファースト</li>
+       				<li>IE8はサポートしない</li>
+       				<li>リセットCSSはsanitize.css v3.3.0を使用</li>
+       				<li>flexboxを使ったグリッドシステムも用意</li>
+       				<li>カスタマイズしやすいように装飾は最小限</li>
+       				<li>WordPressが付与するCSSクラスに対応</li>
+       			</ul>
+        	</section>
+        	<section>
+        		<h1>テキスト関連タグの表示テスト h1</h1>
+				<h2>h2タグ</h2>
+				<h3>h3タグ</h3>
+				<h4>h4タグ</h4>
+				<h5>h5タグ</h5>
+				<h6>h6タグ</h6>
+				<p>headingタグのフォントサイズをはじめとしたスタイルの調整は、"wordpress.scss"で行います。</p>
+				<p>pタグ　<a href="#">テキストリンクの色は、"_parameter.scss"の、"$color_link"で設定します。</a></p>
+		       	<p><img src="https://placehold.jp/300x40.png" class="alignleft" />画像の配置デモ。imgタグに"alignleft"クラスを付与すると左寄せになります。最大サイズは元画像サイズ、ウィンドウ幅を小さくすると、ボックス幅の50%を維持し、スマートフォンサイズ以下ではボックスの幅100%になります。</p>
+        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="alignright" />こちらは"alignright"クラス。</p>
+        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="alignleft tab-center" />alignleftに"tab-center"を追記。tabサイズで中央揃えになる</p>
+        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="alignright sp-center" />alignrightに"sp-center"を追記。spサイズで中央揃えになる</p>
+        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="aligncenter" />こちらは"aligncenter"クラス。margin: 0 auto; によって中央に揃えています。</p>
+        		<blockquote>
+				  	<p>引用</p>
+				  	<p>blockquoteタグの表示テスト</p>
+				</blockquote>
+        	</section>
+        	<section>
+        		<h2>パン屑リスト</h2>
+				<div class="breadcrumb">
+					<ul>
+						<li><a href="#">top</a></li>
+						<li><a href="#">sample</a></li>
+						<li><a href="#">current</a></li>
+					</ul>
+				</div>
+        	</section>
+        </div><!-- container -->
+    </body>
+</html>

@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import "_parameter";
+
+/* equally divided cullum */
+.divide-eq {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	>* {
+		display: table-cell;
+	}
+}
