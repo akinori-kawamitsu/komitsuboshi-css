@@ -512,6 +512,7 @@ a:link, a:visited {
 }
 a:hover, a:active {
   opacity: 0.85;
+  -ms-filter: "alpha(opacity=85)";
   border-bottom: 1px dashed;
 }
 
@@ -1221,6 +1222,8 @@ img {
 .gnav li {
   width: 100%;
   border-bottom: 1px solid #9C590B;
+  text-align: center;
+  vertical-align: middle;
 }
 .gnav li:not(:last-child) {
   border-right: 1px solid #9C590B;
@@ -1230,7 +1233,6 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-  text-align: center;
   background-color: #FFB76E;
   color: #333;
   line-height: 1;

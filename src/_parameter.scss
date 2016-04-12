@@ -11,6 +11,9 @@ $margin_tab_col:8px;
 $margin_pc_row:20px;
 $margin_pc_col:10px;
 
+// ie8 margin settings (only % unit)
+$margin_ie_col: 0.5%;
+
 // breackpoint settings 
 $sp:480px;
 $tab:$sp+1px;
@@ -28,6 +31,10 @@ $font_code: Consolas, 'Courier New', Courier, Monaco, monospace, "Osaka－等幅
 $font_size: 16px;
 
 $line_height: 1.6;
+
+// anchor opacity
+$a_opacity: 0.85;
+$a_filter: alpha(opacity=($a_opacity * 100));
 
 // color settings
 $color_base: #FFF;
@@ -51,4 +58,3 @@ $color_accent: #9C590B;
 // breadcrumb separetor
 $breadcrumb: ">";
 
-// bender prefix

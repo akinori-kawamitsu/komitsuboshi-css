@@ -108,6 +108,7 @@ a:link, a:visited {
 }
 a:hover, a:active {
   opacity: 0.85;
+  -ms-filter: "alpha(opacity=85)";
   border-bottom: 1px dashed;
 }
 

@@ -1,12 +1,117 @@
 @charset "utf-8";
 @import "_parameter";
+/* base patch */
+.container {
+	min-width: $sp;
+}
 
-/* equally divided cullum */
-.divide-eq {
+/* grid patch */
+.flex-sp-eq, .flex-tab-eq, .flex-pc-eq {
 	width: 100%;
 	display: table;
 	table-layout: fixed;
 	>* {
 		display: table-cell;
 	}
+}
+
+.row {
+	width: 100% + (2*$margin_ie_col);
+	margin-left: (-$margin_ie_col);
+		&::after {
+			@include clearfix;
+			}
+}
+
+%spmargin {
+	margin:  0 $margin_ie_col $margin_pc_row;
+}
+
+%col_sp {
+	float: left;
+	margin: 0 $margin_ie_col $margin_pc_row;
+}
+
+%col_spr {
+	float: right;
+	margin: 0 $margin_ie_col $margin_pc_row;
+}
+
+@for $num from 1 through 12 {
+	// float settings
+	.col-#{$num}, .col-pc-#{$num}, .col-tab-#{$num}, .col-sp-#{$num} {
+		@extend %col_sp;
+	}	
+	.col-#{$num}r, .col-pc-#{$num}r, .col-tab-#{$num}r, .col-sp-#{$num}r {
+		@extend %col_spr;
+	}
+	
+	.col-#{$num}, .col-pc-#{$num}, .col-tab-#{$num},
+	.col-#{$num}r, .col-pc-#{$num}r, .col-tab-#{$num}r {
+		width: (100%*$num/12) - (2*$margin_ie_col);
+	}
+}
+
+@for $num from 1 through 4 {
+	// float settings
+	.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5, .col-sp-#{$num}by5 {
+		@extend %col_sp;
+	}
+	.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r, .col-sp-#{$num}by5r {
+		@extend %col_spr;
+	}
+	
+	// sp width settings
+	.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5, .col-sp-#{$num}by5,
+	.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r, .col-sp-#{$num}by5r {
+		width: (100%*$num/5) - (2*$margin_ie_col);
+	}
+}
+
+@for $num from 1 through 6 {
+	// float settings
+	.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7, .col-sp-#{$num}by7 {
+		@extend %col_sp;
+	}
+	.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r {
+		@extend %col_spr;
+	}
+	
+	// sp width settings
+	.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7, .col-sp-#{$num}by7,
+	.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r {
+		width: (100%*$num/7) - (2*$margin_ie_col);
+	}
+}
+
+
+/* component patch */
+.breadcrumb li:after {
+	content: $breadcrumb;
+	margin-left: 0.5em;
+}
+.breadcrumb li:last-child:after {
+	content: " ";
+	margin-left: 0.5em;
+}
+
+/* decoration patch */
+.gnav li {
+	width: 100%;
+	height: 2.5em;
+	background-color: $color-main;
+	border-bottom: 1px solid $color-accent;
+	border-right: 1px solid $color-accent;
+}
+
+.gnav a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $color-main;
+	color: $color-text;
+	line-height: 1;
+	padding: 5px 3px;
 }

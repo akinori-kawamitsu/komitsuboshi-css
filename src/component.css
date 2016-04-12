@@ -1,0 +1,22 @@
+.breadcrumb ul {
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: ">";
+  margin-left: 0.5em;
+}
+
+.breadcrumb a:link, .breadcrumb a:visited {
+  color: #333;
+}
+
+.breadcrumb a:hover, .breadcrumb a:active {
+  color: #00D;
+}

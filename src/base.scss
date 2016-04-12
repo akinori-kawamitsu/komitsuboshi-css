@@ -94,7 +94,8 @@ a {
 		text-decoration: none;
 	}
 	&:hover, &:active {
-		opacity: 0.85;
+		opacity: $a_opacity;
+		-ms-filter: "#{$a_filter}";
 		border-bottom: 1px dashed;
 	}
 }
