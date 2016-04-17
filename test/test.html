@@ -44,11 +44,11 @@
 				<h6>h6タグ</h6>
 				<p>headingタグのフォントサイズをはじめとしたスタイルの調整は、"wordpress.scss"で行います。</p>
 				<p>pタグ　<a href="#">テキストリンクの色は、"_parameter.scss"の、"$color_link"で設定します。</a></p>
-		       	<p><img src="https://placehold.jp/300x40.png" class="alignleft" />画像の配置デモ。imgタグに"alignleft"クラスを付与すると左寄せになります。最大サイズは元画像サイズ、ウィンドウ幅を小さくすると、ボックス幅の50%を維持し、スマートフォンサイズ以下ではボックスの幅100%になります。</p>
-        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="alignright" />こちらは"alignright"クラス。</p>
-        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="alignleft tab-center" />alignleftに"tab-center"を追記。tabサイズで中央揃えになる</p>
-        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="alignright sp-center" />alignrightに"sp-center"を追記。spサイズで中央揃えになる</p>
-        		<p class="clear"><img src="https://placehold.jp/300x40.png" class="aligncenter" />こちらは"aligncenter"クラス。margin: 0 auto; によって中央に揃えています。</p>
+		       	<p><img alt="" src="https://placehold.jp/300x40.png" class="alignleft" />画像の配置デモ。imgタグに"alignleft"クラスを付与すると左寄せになります。最大サイズは元画像サイズ、ウィンドウ幅を小さくすると、ボックス幅の50%を維持し、スマートフォンサイズ以下ではボックスの幅100%になります。</p>
+        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="alignright" />こちらは"alignright"クラス。</p>
+        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="alignleft tab-center" />alignleftに"tab-center"を追記。tabサイズで中央揃えになる</p>
+        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="alignright sp-center" />alignrightに"sp-center"を追記。spサイズで中央揃えになる</p>
+        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="aligncenter" />こちらは"aligncenter"クラス。margin: 0 auto; によって中央に揃えています。</p>
         		<blockquote>
 				  	<p>引用</p>
 				  	<p>blockquoteタグの表示テスト</p>
@@ -64,6 +64,13 @@
 					</ul>
 				</div>
         	</section>
+            <section>
+                <h2>画像キャプション</h2>
+                <div class="wp-caption" style="width: 310px">
+                    <img alt="" src="https://placehold.jp/300x40.png" class="aligncenter" />
+                    <p class="wp-caption-text">キャプションテキスト</p>
+                </div>
+            </section>
         </div><!-- container -->
     </body>
 </html>
