@@ -1,4 +1,4 @@
-# kicss ver 0.2beta
+# komitsuboshi-css ver 0.3
 Bootstrap, Foundationを参考にして作ったCSSフレームワークです。
 
 ##コンセプト
@@ -8,10 +8,11 @@ Bootstrap, Foundationを参考にして作ったCSSフレームワークです�
 -WordPress対応
 -ネーミングはBEMっぽく
 
-##ver0.2beta概要
-ブラウザチェックがまだなのでbeta版としています。
+##ver0.3概要
 確認済みブラウザ
 Firefox 45, IE8,9,10(IE11開発者モードにて確認),IE11 
+Mac Safari, Mac Chrome,
+iOS Safari, iOS Choreme
 
 ###グリッドレイアウト
 [target]=sp（スマートフォン:320~480px）, tab（タブレット:481~768px）, pc（パソコン:769~）
@@ -36,7 +37,7 @@ flex-[target]-eq は、均等分割です。要素間にスペースはありま
 
 ##各ファイルの説明
 ###style.scss
-kicssの主要ファイルをまとめています。
+komitsuboshi-cssの主要ファイルをまとめています。
 
 ###reset.scss
 normalize.css v4.0.0　に少し追記したものを使用しています。
@@ -78,3 +79,9 @@ csscomb.json
 WordPressのコードディング基準に合わせるためのcsscombファイル。
 https://github.com/cedaro/grunt-wp-css/blob/develop/tasks/config/default.json
 bradyvercher氏作。
+
+
+##変更履歴
+0.1alfa　grid.cssほぼ完成。
+0.2beta　クラス名rowをfloatに変更。Windowsの主要ブラウザのデバッグ。
+0.3　名前をkicssからkomitsuboshi-cssに変更（同名がすでにあった）。Mac,iOSの主要ブラウザの動作確認。
