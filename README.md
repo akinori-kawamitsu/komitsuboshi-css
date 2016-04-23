@@ -8,8 +8,8 @@ Bootstrap, Foundationを参考にして作ったCSSフレームワークです�
 -WordPress対応
 -ネーミングはBEMっぽく
 
-##ver0.1bata概要
-ブラウザチェックがまだなのでbata版としています。
+##ver0.2beta概要
+ブラウザチェックがまだなのでbeta版としています。
 確認済みブラウザ
 Firefox 45, IE8,9,10(IE11開発者モードにて確認),IE11 
 
