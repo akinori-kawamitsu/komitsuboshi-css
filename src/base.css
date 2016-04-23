@@ -211,6 +211,7 @@ img {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 980px) {
@@ -248,6 +249,27 @@ img {
 
 .textjustyfy {
   text-align: justify;
+}
+
+.caption {
+  max-width: 100%;
+  box-sizing: content-box;
+  line-height: 1.2;
+  display: block;
+}
+
+.caption-img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.caption-img > img {
+  max-width: 100%;
+}
+
+.caption-text {
+  display: inline;
+  font-size: 14px;
 }
 
 .mt5 {
@@ -313,5 +335,3 @@ img {
 .mb60 {
   margin-bottom: 60px;
 }
-
-/*# sourceMappingURL=base.css.map */

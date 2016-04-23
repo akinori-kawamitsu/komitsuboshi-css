@@ -1,4 +1,4 @@
-# kicss ver 0.1alfa
+# kicss ver 0.2beta
 Bootstrap, Foundationを参考にして作ったCSSフレームワークです。
 
 ##コンセプト
@@ -8,18 +8,19 @@ Bootstrap, Foundationを参考にして作ったCSSフレームワークです�
 -WordPress対応
 -ネーミングはBEMっぽく
 
-##ver0.1alfa概要
-ブラウザチェックがまだなのでalfa版としています。
+##ver0.1bata概要
+ブラウザチェックがまだなのでbata版としています。
 確認済みブラウザ
-Firefox 45
+Firefox 45, IE8,9,10(IE11開発者モードにて確認),IE11 
 
 ###グリッドレイアウト
 [target]=sp（スマートフォン:320~480px）, tab（タブレット:481~768px）, pc（パソコン:769~）
 [size]=1~12, 1r~12r, 1by5~4by5, 1by5~4by5r, 1by7~6by7, 1by7~6by7r
 
-コンテナとして、row, flex, flex-r, flex-[target]-eq を用意しています。
+コンテナとして、float, flex, flex-r, flex-[target]-eq を用意しています。
 
-row の代わりにflexを使うと、子要素はflexboxレイアウトになります。右詰めで行う場合はflex-r
+floatはBootstrapにおけるrowと同じです。（衝突を避けるため、row-colではなく、float-colのセットとなります）
+float の代わりにflexを使うと、子要素はflexboxレイアウトになります。右詰めで行う場合はflex-r
 
 flex-[target]-eq は、均等分割です。要素間にスペースはありません。
 
@@ -58,10 +59,22 @@ WordPressが付与するクラスのカスタマイズはこのファイルで�
 ###decoration.scss
 案件によっていろいろカスタマイズするであろう要素のファイルです。
 
-###ie8.scss
-ie8用のファイルです。ver0.1alfa の時点ではまだ不十分です。
+###ie8.scss, ie9.scss, ie10.scss
+ie8,9,10用のファイルです。
+ie8はメディアクエリ非対応です。またcontainerの最小幅をspサイズの最大値（デフォルトでは480px）に制限しています。
+flexboxをカバーするため、IE9以下ではjquery.matchHeight.jsを読み込んでいます。
+ie10以下では、flexboxの等幅分割をdisplay:table;,display:table-cell;で代用しています。
+
+###jquery.matchHeight.js
+ie8,9でflexboxと同等の表示にするためのプラグインです。
+ jquery-match-height master by @liabru
+ http://brm.io/jquery-match-height/
+WordPressでも動作するようにカプセル化しています。(ver 0.2beta)
+
+###kicss.js
+画像キャプション機能を提供するjQueryを入れています。(ver 0.2beta)
 
 csscomb.json
 WordPressのコードディング基準に合わせるためのcsscombファイル。
 https://github.com/cedaro/grunt-wp-css/blob/develop/tasks/config/default.json
-bradyvercher氏制作。MITライセンス。
+bradyvercher氏作。

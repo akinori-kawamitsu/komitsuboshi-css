@@ -2,7 +2,7 @@
 @import "_parameter";
 /* row-col grid layout */
 
-.row {
+.float {
 	width: calc(100% + #{2*$margin_sp_col});
 	margin-left: (-$margin_sp_col);
 		&::after {
@@ -64,11 +64,11 @@
 	}
 	
 	// sp width settings
-	.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5, .col-sp-#{$num}by5,
-	.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r, .col-sp-#{$num}by5r {
+	.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5,
+	.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r {
 			@extend %othersp;
 	}
-	.col-sp-#{$num}by5, .col-sp-#{$num}by5 {
+	.col-sp-#{$num}by5, .col-sp-#{$num}by5r {
 		width: calc(#{20*$num}% - #{2*$margin_sp_col});
 	}
 }
@@ -95,7 +95,7 @@
 
 
 @media screen and (min-width:$tab) {
-	.row {
+	.float {
 		width: calc(100% + #{2*$margin_tab_col});
 		margin-left: (-$margin_tab_col);
 	}
@@ -189,7 +189,7 @@
 
 
 @media screen and (min-width:$pc) {
-	.row {
+	.float {
 		width: calc(100% + #{2*$margin_pc_col});
 		margin-left: (-$margin_pc_col);
 	}
@@ -227,30 +227,39 @@
 
 // flexbox grid
 .flex {
+	display: -webkit-box;
 	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	align-items: stretch;
 	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
 	flex-direction: row;
 	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	width: calc(100% + #{2*$margin_sp_col});
 	margin-left: (-$margin_sp_col);
 }
 
 .flex-r {
+	display: -webkit-box;
 	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	align-items: stretch;
 	-webkit-flex-direction: row-reverse;
+	-ms-flex-direction: row-reverse;
 	flex-direction: row-reverse;
 	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	width: calc(100% + #{2*$margin_sp_col});
 	margin-left: (-$margin_sp_col);
 }
 
 .flex-sp-eq {
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	align-items: stretch;
@@ -260,10 +269,17 @@
 	flex-wrap: nowrap;
 	-webkit-flex-grow: 1;
 	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 100%;
+	justify-content: space-around;
 	width: 100%;
+	>* {
+		width: 100%;
+	}
 }
 
 .flex-tab-eq, .flex-pc-eq {
+	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
 	align-items: stretch;
@@ -274,7 +290,8 @@
 	-webkit-flex-grow: 1;
 	flex-grow: 1;
 	width: 100%;
-}
+	}
+
 
 @media screen and (min-width:$tab) {
 	.flex, .flex-r {

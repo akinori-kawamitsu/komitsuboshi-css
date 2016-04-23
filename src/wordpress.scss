@@ -2,14 +2,14 @@
 @import "_parameter";
 
 .wp-caption {
-   text-align: center;
    margin: $margin_sp_row $margin_sp_col;
    max-width: 100%;
     &::after {
         @include clearfix;
     }
-    .alignleft, alignright {
+    .alignleft, .alignright, .aligncenter {
         max-width: 100%;
+		display: inline;
     }
 }
 
@@ -22,7 +22,6 @@
 .wp-caption p.wp-caption-text {
    font-size: 14px;
    line-height: 1.3;
-   padding: 2px 4px 5px;
    margin: 0;
 }
 

@@ -1,5 +1,4 @@
 .wp-caption {
-  text-align: center;
   margin: 10px 5px;
   max-width: 100%;
 }
@@ -9,8 +8,9 @@
   display: block;
   line-height: 0;
 }
-.wp-caption .alignleft, .wp-caption alignright {
+.wp-caption .alignleft, .wp-caption .alignright, .wp-caption .aligncenter {
   max-width: 100%;
+  display: inline;
 }
 
 .wp-caption img {
@@ -22,8 +22,5 @@
 .wp-caption p.wp-caption-text {
   font-size: 14px;
   line-height: 1.3;
-  padding: 2px 4px 5px;
   margin: 0;
 }
-
-/*# sourceMappingURL=wordpress.css.map */

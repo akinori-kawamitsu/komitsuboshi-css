@@ -4,17 +4,33 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../src/style.css" />
-        <!--[if lt IE 9]>
-		<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
-		<link rel="stylesheet" type="text/css" href="../src/ie8.css" />
-		<![endif]-->
         <title>kicss test</title>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="../src/kicss.js" type="text/javascript"></script>
         <script type="text/javascript">
 		  $(function(){
 			  $("#header").load("header.html");
 		  })
 		</script>
+		<script>
+		var ua = window.navigator.userAgent.toLowerCase();
+		if (ua.indexOf("msie 10") != -1){
+		document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+		}
+		</script>
+        <!--[if lte IE 9]>
+		<script src="../src/jquery.matchHeight.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		jQuery(function() {
+			jQuery("[class^='flex'] [class^='col-']").matchHeight();
+		});
+		</script>
+		<link rel="stylesheet" type="text/css" href="../src/ie9.css" />
+		<![endif]-->
+        <!--[if lt IE 9]>
+		<script src="bower_components/html5shiv/dist/html5shiv.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="../src/ie8.css" />
+		<![endif]-->
     </head>
     <body>
       <div class="header" id="header">
@@ -28,7 +44,6 @@
        				<li>Bootstrapほどブレイクポイントは細かくない。スマートフォン（sp）、タブレット（tab）、パソコンモニタ（pc）の3段階</li>
        				<li>グリッド間の余白を、固定値（px）で指定できる。また、sp,tab,pcでそれぞれ余白を設定できる</li>
        				<li>モバイルファースト</li>
-       				<li>IE8はサポートしない</li>
        				<li>リセットCSSはsanitize.css v3.3.0を使用</li>
        				<li>flexboxを使ったグリッドシステムも用意</li>
        				<li>カスタマイズしやすいように装飾は最小限</li>
@@ -53,6 +68,10 @@
 				  	<p>引用</p>
 				  	<p>blockquoteタグの表示テスト</p>
 				</blockquote>
+       			<p class="textleft">textleftテスト</p>
+       			<p class="textright">textrightテスト</p>
+       			<p class="textcenter">textcenterテスト</p>
+       			<p class="textjustify">textjustifyテスト</p>
         	</section>
         	<section>
         		<h2>パン屑リスト</h2>
@@ -68,8 +87,34 @@
                 <h2>画像キャプション</h2>
                 <div class="wp-caption" style="width: 310px">
                     <img alt="" src="https://placehold.jp/300x40.png" class="aligncenter" />
-                    <p class="wp-caption-text">キャプションテキスト</p>
+                    <p class="wp-caption-text">WordPressでキャプション付きの画像を挿入した際の出力に関する動作テスト。</p>
                 </div>
+            </section>
+                        <section>
+                <h2>画像キャプション</h2>
+                <div class="caption alignright">
+                    <img alt="" src="https://placehold.jp/300x40.png" class="caption-img" />
+                    <p class="caption-text">imgタグを"caption alignleft"のクラスを付与したボックスで囲み、box内のimgには"caption-img"、キャプションのテキストには"caption-text"を付与しています。</p>
+                </div>
+                <div class="caption alignleft">
+                    <img alt="" src="https://placehold.jp/100x40.png" class="caption-img" />
+                    <p class="caption-text">imgタグを"caption alignleft"のクラスを付与したボックスで囲み、box内のimgには"caption-img"、キャプションのテキストには"caption-text"を付与しています。</p>
+                </div>
+                <p>回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト</p>
+                <div class="caption">
+                	<div class="caption-img"><img src="https://placehold.jp/150x40.png"> <img src="https://placehold.jp/250x40.png"></div>
+                	<p class="caption-text">2つの画像を"caption-img"をつけたボックスで囲み、この"caption-text"の文字列とともに"caption"のボックスに入れました。</p>
+                </div>
+                
+                <div class="caption alignleft border">
+                    <img alt="" src="https://placehold.jp/100x40.png" class="caption-img" />
+                    <p class="caption-text">キャプションテキストは画像の幅で折り返す</p>
+                </div>
+                <div class="caption alignleft border">
+                	<div class="caption-img"><img src="https://placehold.jp/100x40.png"> <img src="https://placehold.jp/100x40.png"></div>
+                	<p class="caption-text">2つの画像に対して1つのキャプションテキストを入れることもある。</p>
+                </div>
+                <p class="clear"> test</p>
             </section>
         </div><!-- container -->
     </body>

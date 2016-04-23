@@ -1,0 +1,53 @@
+@charset "utf-8";
+@import "_parameter";
+/* base patch */
+
+/* grid patch */
+.flex-sp-eq, .flex-tab-eq, .flex-pc-eq {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	>* {
+		display: table-cell;
+	}
+}
+
+@media screen and (max-width:$sp) {
+	.flex-tab-eq {
+		display: block;
+		>* {
+			display: block;
+		}
+	}
+}
+
+@media screen and (max-width:$tabmax) {	
+	.flex-pc-eq {
+		display: block;
+		>* {
+			display: block;
+		}
+	}
+}
+
+/* decoration patch */
+.gnav li {
+	width: 100%;
+	height: auto;
+	background-color: $color-main;
+	border-bottom: 1px solid $color-accent;
+	border-right: 1px solid $color-accent;
+}
+
+.gnav a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: $color-main;
+	color: $color-text;
+	line-height: 1;
+	padding: 5px 3px;
+}
+
