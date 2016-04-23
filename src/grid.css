@@ -433,6 +433,9 @@
   flex-grow: 1;
   width: 100%;
 }
+.flex-tab-eq > *, .flex-pc-eq > * {
+  width: 100%;
+}
 
 @media screen and (min-width: 481px) {
   .flex, .flex-r {

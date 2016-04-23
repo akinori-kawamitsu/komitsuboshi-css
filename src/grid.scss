@@ -290,7 +290,10 @@
 	-webkit-flex-grow: 1;
 	flex-grow: 1;
 	width: 100%;
+	>* {
+		width: 100%;
 	}
+}
 
 
 @media screen and (min-width:$tab) {
