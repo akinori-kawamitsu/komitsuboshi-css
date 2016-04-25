@@ -17,6 +17,9 @@
 		if (ua.indexOf("msie 10") != -1){
 		document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
 		}
+		else if (ua.indexOf("linux; u;") >0){
+		document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+		}
 		</script>
         <!--[if lte IE 9]>
 		<script src="../src/jquery.matchHeight.js" type="text/javascript"></script>
@@ -59,11 +62,11 @@
 				<h6>h6タグ</h6>
 				<p>headingタグのフォントサイズをはじめとしたスタイルの調整は、"wordpress.scss"で行います。</p>
 				<p>pタグ　<a href="#">テキストリンクの色は、"_parameter.scss"の、"$color_link"で設定します。</a></p>
-		       	<p><img alt="" src="https://placehold.jp/300x40.png" class="alignleft" />画像の配置デモ。imgタグに"alignleft"クラスを付与すると左寄せになります。最大サイズは元画像サイズ、ウィンドウ幅を小さくすると、ボックス幅の50%を維持し、スマートフォンサイズ以下ではボックスの幅100%になります。</p>
-        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="alignright" />こちらは"alignright"クラス。</p>
-        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="alignleft tab-center" />alignleftに"tab-center"を追記。tabサイズで中央揃えになる</p>
-        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="alignright sp-center" />alignrightに"sp-center"を追記。spサイズで中央揃えになる</p>
-        		<p class="clear"><img alt="" src="https://placehold.jp/300x40.png" class="aligncenter" />こちらは"aligncenter"クラス。margin: 0 auto; によって中央に揃えています。</p>
+		       	<p><img alt="" src="300x40.png" class="alignleft" />画像の配置デモ。imgタグに"alignleft"クラスを付与すると左寄せになります。最大サイズは元画像サイズ、ウィンドウ幅を小さくすると、ボックス幅の50%を維持し、スマートフォンサイズ以下ではボックスの幅100%になります。</p>
+        		<p class="clear"><img alt="" src="300x40.png" class="alignright" />こちらは"alignright"クラス。</p>
+        		<p class="clear"><img alt="" src="300x40.png" class="alignleft tab-center" />alignleftに"tab-center"を追記。tabサイズで中央揃えになる</p>
+        		<p class="clear"><img alt="" src="300x40.png" class="alignright sp-center" />alignrightに"sp-center"を追記。spサイズで中央揃えになる</p>
+        		<p class="clear"><img alt="" src="300x40.png" class="aligncenter" />こちらは"aligncenter"クラス。margin: 0 auto; によって中央に揃えています。</p>
         		<blockquote>
 				  	<p>引用</p>
 				  	<p>blockquoteタグの表示テスト</p>
@@ -86,33 +89,41 @@
             <section>
                 <h2>画像キャプション</h2>
                 <div class="wp-caption" style="width: 310px">
-                    <img alt="" src="https://placehold.jp/300x40.png" class="aligncenter" />
+                    <img alt="" src="300x40.png" class="aligncenter" />
                     <p class="wp-caption-text">WordPressでキャプション付きの画像を挿入した際の出力に関する動作テスト。</p>
                 </div>
             </section>
                         <section>
                 <h2>画像キャプション</h2>
                 <div class="caption alignright">
-                    <img alt="" src="https://placehold.jp/300x40.png" class="caption-img" />
+                    <img alt="" src="300x40.png" class="caption-img" />
                     <p class="caption-text">imgタグを"caption alignleft"のクラスを付与したボックスで囲み、box内のimgには"caption-img"、キャプションのテキストには"caption-text"を付与しています。</p>
                 </div>
                 <div class="caption alignleft">
-                    <img alt="" src="https://placehold.jp/100x40.png" class="caption-img" />
+                    <img alt="" src="100x40.png" class="caption-img" />
                     <p class="caption-text">imgタグを"caption alignleft"のクラスを付与したボックスで囲み、box内のimgには"caption-img"、キャプションのテキストには"caption-text"を付与しています。</p>
                 </div>
                 <p>回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト回り込みテキスト</p>
                 <div class="caption">
-                	<div class="caption-img"><img src="https://placehold.jp/150x40.png"> <img src="https://placehold.jp/250x40.png"></div>
+                	<div class="caption-img"><img src="150x40.png"> <img src="250x40.png"></div>
                 	<p class="caption-text">2つの画像を"caption-img"をつけたボックスで囲み、この"caption-text"の文字列とともに"caption"のボックスに入れました。</p>
                 </div>
                 
                 <div class="caption alignleft border">
-                    <img alt="" src="https://placehold.jp/100x40.png" class="caption-img" />
+                    <img alt="" src="100x40.png" class="caption-img" />
                     <p class="caption-text">キャプションテキストは画像の幅で折り返す</p>
                 </div>
                 <div class="caption alignleft border">
-                	<div class="caption-img"><img src="https://placehold.jp/100x40.png" style="padding-right:5px;"><img src="https://placehold.jp/100x40.png"></div>
+                	<div class="caption-img"><img src="100x40.png" style="padding-right:10px;"><img src="100x40.png"></div>
                 	<p class="caption-text">2つの画像に対して1つのキャプションテキストを入れることもある。このとき、画像間の隙間は、padding-rightを用いる必要がある。（テキストのスペースで間隔をあけた場合、iPhoneでは正しく計算できず、画像が横並びにならない）</p>
+                </div>
+                <div class="caption alignleft border">
+                	<div class="caption-img"><img src="100x40.png" style="margin-right:10px;"><img src="100x40.png"></div>
+                	<p class="caption-text">margin-right:10px;　で隙間を空けた場合</p>
+                </div>
+                <div class="caption alignleft border">
+                	<div class="caption-img"><img src="100x40.png"> <img src="100x40.png"></div>
+                	<p class="caption-text">テキストのスペースで間隔をあけた場合</p>
                 </div>
                 <p class="clear"> test</p>
             </section>

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAOA,cAAe;EACd,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,CAAC;;;AAGX,cAAe;EACd,OAAO,EAAE,YAAY;EACrB,YAAY,EAAE,GAAG;;;AAGlB,sCAAuC;EACtC,OAAO,ECwCK,GAAG;EDvCf,WAAW,EAAE,KAAK;;;AAGnB,yCAA0C;EACzC,KAAK,ECiBO,IAAI;;;ADdjB,yCAA0C;EACzC,KAAK,ECiBO,IAAI",
-"sources": ["component.scss","_parameter.scss"],
-"names": [],
-"file": "component.css"
-}
