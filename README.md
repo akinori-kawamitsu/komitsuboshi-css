@@ -1,4 +1,4 @@
-# komitsuboshi-css ver 0.3
+# komitsuboshi-css ver 0.4
 Bootstrap, Foundationを参考にして作ったCSSフレームワークです。
 
 ##コンセプト
@@ -85,3 +85,4 @@ bradyvercher氏作。
 0.1alfa　grid.cssほぼ完成。
 0.2beta　クラス名rowをfloatに変更。Windowsの主要ブラウザのデバッグ。
 0.3　名前をkicssからkomitsuboshi-cssに変更（同名がすでにあった）。Mac,iOSの主要ブラウザの動作確認。
+0.4　ファイル・フォルダを整理。decoration.scssをデフォルトの読み込みから削除。
