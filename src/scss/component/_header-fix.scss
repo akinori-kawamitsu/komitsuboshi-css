@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import "../_parameter";
+.header-fix {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: $header_height;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: #999 0 1px 2px;
+	&::after {
+		@include clearfix;
+	}
+}
+
+.header-fix + * {
+    margin-top: $header_height;
+}
