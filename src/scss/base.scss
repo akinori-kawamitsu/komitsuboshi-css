@@ -276,10 +276,10 @@ $mgn: 5;
 }
 $mgnl: 30;
 @while $mgnl <=60 {
-	.mt#{$mgnl} {
+	.mt-#{$mgnl} {
 		margin-top: #{$mgnl}px;
 	}
-	.mb#{$mgnl} {
+	.mb-#{$mgnl} {
 		margin-bottom: #{$mgnl}px;
 	}
 	$mgnl: $mgnl + 10;
