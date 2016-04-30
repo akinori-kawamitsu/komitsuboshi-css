@@ -12,7 +12,14 @@ body {
 
 section {
 	clear: both;
-	margin-top: 10px;
+	padding-top: 10px;
+}
+
+code {
+	overflow-x: scroll;
+	font-size: $font_small;
+	font-family: $font_code;
+	white-space: pre;
 }
 
 // h1 to h6 common style
@@ -152,7 +159,7 @@ img {
 			white-space: pre;
 		}
 	}
-//  tabサイズで中央配置にする　sp-center
+//  tabサイズで中央配置にする　tab-center
 	.tab-center, img.alignleft.tab-center, img.alignright.tab-center {
 		float: none;
 		display: block;
@@ -248,6 +255,7 @@ img {
 	box-sizing: content-box;
 	line-height: 1.2;
 	display: block;
+	margin-bottom: $margin_sp_row;
 }
 
 .caption-img {
@@ -263,6 +271,30 @@ img {
 	display: inline;
    font-size: 14px;
 }
+
+
+// display control
+.tab, .pc {
+	display: none;
+}
+@media screen and (min-width:$tab) {
+	.sp {
+		display: none;
+	}
+	.tab {
+		display: block;
+	}
+}
+
+@media screen and (min-width:$pc) {
+	.tab {
+		display: none;
+	}
+	.pc {
+		display: block;
+	}
+}
+
 
 $mgn: 5;
 @while $mgn <=20 {

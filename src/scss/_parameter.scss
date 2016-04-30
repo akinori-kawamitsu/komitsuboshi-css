@@ -29,6 +29,7 @@ $font_sanserif: "游ゴシック", "Yu Gothic", YuGothic,"ヒラギノ角ゴ Pro
 $font_code: Consolas, 'Courier New', Courier, Monaco, monospace, "Osaka－等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic";
 
 $font_size: 16px;
+$font_small: 14px;
 
 $line_height: 1.6;
 
@@ -61,7 +62,3 @@ $header_itemsheight: 38px;
 
 // breadcrumb separetor
 $breadcrumb: ">";
-
-// header-fix
-$header-height: 40px;
-$header-item: 38px;

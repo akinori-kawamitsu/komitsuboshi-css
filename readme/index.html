@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<title>Komitsuboshi-css</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Bootstrap、FoundationをベースにしたCSSフレームワーク">
+	<meta name='keywords' content='CSSフレームワーク, グリッド,　使い方,　komitsuboshi-css'>
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="Komitsuboshi-css" />
+	<meta property="og:description" content="Bootstrap、FoundationをベースにしたCSSフレームワーク" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="http://komituboshi.com/komitsuboshi-css/test/" />
+	<meta property="og:site_name" content="Komitsuboshi Intarface"/>
+	<link rel="stylesheet" type="text/css" href="../src/style.css" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="../src/kcss.js" type="text/javascript"></script>
+	<script>
+	var ua = window.navigator.userAgent.toLowerCase();
+	if (ua.indexOf("msie 10") != -1){
+	document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+	}
+	else if (ua.indexOf("linux; u;") >0){
+	document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+	}
+	</script>
+	<!--[if lte IE 9]>
+	<script src="../src/jquery.matchHeight.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	jQuery(function() {
+		jQuery("[class^='flex'] [class^='col-']").matchHeight();
+	});
+	</script>
+	<link rel="stylesheet" type="text/css" href="../src/ie9.css" />
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="../src/html5shiv.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="../src/ie8.css" />
+	<![endif]-->
+</head>
+<body>	
+	<main class="main">
+		<section id="Komitsuboshi-css" class="jumbotron base-main">
+			<div class="container">
+				<h1 class="title">Komitsuboshi-css</h1>
+				<p class="lead">Bootstrapはオーバースペックという人のためのCSSフレームワーク</p>
+				<div class="btn"><a href="https://github.com/akinori-kawamitsu/komitsuboshi-css">Download(GitHub)</a></div>
+			</div>
+		</section>
+		<section id="About">
+			<div class="container">
+				<h2>特徴</h2>
+				<ul>
+					<li>レスポンシブ（リキッド）</li>
+					<li>モバイルファースト</li>
+					<li>12＋2グリッドレイアウト（12グリッド、n/5,n/7）</li>
+					<li>Bootstrapに近いコーディング</li>
+					<li>レイアウトはfloatとflexを選択可能</li>
+					<li>横並びのルールはfloatとflexで変わらない</li>
+					<li>横並びのブロックは右詰め、左詰めを選択可能</li>
+					<li>ブロック間の余白を、ブレイクポイントで変更可能</li>
+					<li>IE8対応</li>
+					<li>WordPress対応</li>
+					<li>クラス名は原則「機能-場所-詳細」</li>
+					<li>SCSSでカスタマイズを容易に</li>
+				</ul>
+			</div>
+		</section>
+		
+		<section id="Instration">
+			<div class="container">
+				<h2>導入</h2>
+				<p>1. <a href="https://github.com/akinori-kawamitsu/komitsuboshi-css">GitHub</a>からソースをダウンロード。</p>
+				<p>2. &lt;head&gt;タグ内で/src/直下のファイルを読み込ませます。</p>
+				<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../src/style.css&quot; /&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-1.12.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../src/kcss.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+var ua = window.navigator.userAgent.toLowerCase();
+if (ua.indexOf(&quot;msie 10&quot;) != -1){
+document.write('&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../src/ie10.css&quot; /&gt;');
+}
+else if (ua.indexOf(&quot;linux; u;&quot;) &gt;0){
+document.write('&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../src/ie10.css&quot; /&gt;');
+}
+&lt;/script&gt;
+&lt;!--[if lte IE 9]&gt;
+&lt;script src=&quot;../src/jquery.matchHeight.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+jQuery(function() {
+jQuery(&quot;[class^='flex'] [class^='col-']&quot;).matchHeight();
+});
+&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../src/ie9.css&quot; /&gt;
+&lt;![endif]--&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;../src/html5shiv.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../src/ie8.css&quot; /&gt;
+	&lt;![endif]--&gt;</code>
+				<p>※ソースの参照先はそれぞれの環境に合わせてください。</p>
+				
+				<h3>カスタマイズ</h3>
+				<p>※Sass必須です。</p>
+				<h4>_parameter.scssの編集</h4>
+				<p>以下の項目は_parameter.scssで変更します。</p>
+				<ul>
+					<li>グリッド間の余白（pxでの指定が可能です。）</li>
+					<li>ブレイクポイント（sp, tab, pc）</li>
+					<li>フォントファミリー</li>
+					<li>配色</li>
+				</ul>
+				<h4>コンポーネントの選択</h4>
+				<p>component.scssで必要なコンポーネントのSCSSファイルを読み込ませる。</p>
+			</div><!-- container -->
+		</section>
+		
+		<section id="Usage">
+			<div class="container">
+				<h2>使い方</h2>
+				<h3>container</h3>
+				<p>クラス名"container"は、要素の最大幅を960pxとし、左右のマージンを均等にします。（Bootstrapと同じです。）</p>
+				<p>この最大幅は、_parameter.scssの、変数$containerの値で設定します。</p>
+				<h3>floatグリッド</h3>
+				<p>class="float"は、Bootstrapの"row"に相当します。</p>
+				<p>floatの子要素に"col-[画面サイズ]-[占有グリッド数]"のクラスをつけることで分割できます。</p>
+				<code>&lt;div class="float"&gt;
+	  &lt;div class="col-sp-1"&gt;&lt;/div&gt;
+	  &lt;div class="col-sp-11"&gt;&lt;/div&gt;
+	&lt;/div&gt;</code>
+				<p>"col-sp-N"は、全ての画面サイズで分割比を維持します。</p>
+				<div class="float">
+					<div class="col-sp-1" style="background-color: #98F;">col-sp-1</div>
+					<div class="col-sp-11" style="background-color: #9FF;">col-sp-11</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-2" style="background-color: #98F;">col-sp-2</div>
+					<div class="col-sp-10" style="background-color: #9FF;">col-sp-10</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-3" style="background-color: #98F;">col-sp-3</div>
+					<div class="col-sp-9" style="background-color: #9FF;">col-sp-9</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-4" style="background-color: #98F;">col-sp-4</div>
+					<div class="col-sp-8" style="background-color: #9FF;">col-sp-8</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-5" style="background-color: #98F;">col-sp-5</div>
+					<div class="col-sp-7" style="background-color: #9FF;">col-sp-7</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-6" style="background-color: #98F;">col-sp-6</div>
+					<div class="col-sp-6" style="background-color: #9FF;">col-sp-6</div>
+				</div>
+				<p>分割比N/5は、-Nby5で指定します。</p>
+				<div class="float">
+					<div class="col-sp-1by5" style="background-color: #98F;">col-sp-1by5</div>
+					<div class="col-sp-4by5" style="background-color: #9FF;">col-sp-4by5</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-2by5" style="background-color: #98F;">col-sp-2by5</div>
+					<div class="col-sp-3by5" style="background-color: #9FF;">col-sp-3by5</div>
+				</div>
+				<p>同様に、分割比N/7は、-Nby7で指定します。</p>
+				<div class="float">
+					<div class="col-sp-1by7" style="background-color: #98F;">col-sp-1by7</div>
+					<div class="col-sp-6by7" style="background-color: #9FF;">col-sp-6by7</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-2by7" style="background-color: #98F;">col-sp-2by7</div>
+					<div class="col-sp-5by7" style="background-color: #9FF;">col-sp-5by7</div>
+				</div>
+				<div class="float">
+					<div class="col-sp-3by7" style="background-color: #98F;">col-sp-3by7</div>
+					<div class="col-sp-4by7" style="background-color: #9FF;">col-sp-4by7</div>
+				</div>
+				<p>"col-tab-N"は、tabサイズ(481px)以上で分割比を維持、spサイズ(480px)以下で縦に並びます。</p>
+				<div class="float">
+					<div class="col-tab-1" style="background-color: #98F;">col-tab-1</div>
+					<div class="col-tab-11" style="background-color: #9FF;">col-tab-11</div>
+				</div>
+				<div class="float">
+					<div class="col-tab-2" style="background-color: #98F;">col-tab-2</div>
+					<div class="col-tab-10" style="background-color: #9FF;">col-tab-10</div>
+				</div>
+				<div class="float">
+					<div class="col-tab-3" style="background-color: #98F;">col-tab-3</div>
+					<div class="col-tab-9" style="background-color: #9FF;">col-tab-9</div>
+				</div>
+				<div class="float">
+					<div class="col-tab-4" style="background-color: #98F;">col-tab-4</div>
+					<div class="col-tab-8" style="background-color: #9FF;">col-tab-8</div>
+				</div>
+				<div class="float">
+					<div class="col-tab-5" style="background-color: #98F;">col-tab-5</div>
+					<div class="col-tab-7" style="background-color: #9FF;">col-tab-7</div>
+				</div>
+				<div class="float">
+					<div class="col-tab-6" style="background-color: #98F;">col-tab-6</div>
+					<div class="col-tab-6" style="background-color: #9FF;">col-tab-6</div>
+				</div>
+				<p>"col-pc-N"は、pcサイズ(769px)以上で分割比を維持、tabサイズ(768px)以下で縦に並びます。</p>
+				<div class="float">
+					<div class="col-pc-1" style="background-color: #98F;">col-pc-1</div>
+					<div class="col-pc-11" style="background-color: #9FF;">col-pc-11</div>
+				</div>
+				<div class="float">
+					<div class="col-pc-2" style="background-color: #98F;">col-pc-2</div>
+					<div class="col-pc-10" style="background-color: #9FF;">col-pc-10</div>
+				</div>
+				<div class="float">
+					<div class="col-pc-3" style="background-color: #98F;">col-pc-3</div>
+					<div class="col-pc-9" style="background-color: #9FF;">col-pc-9</div>
+				</div>
+				<div class="float">
+					<div class="col-pc-4" style="background-color: #98F;">col-pc-4</div>
+					<div class="col-pc-8" style="background-color: #9FF;">col-pc-8</div>
+				</div>
+				<div class="float">
+					<div class="col-pc-5" style="background-color: #98F;">col-pc-5</div>
+					<div class="col-pc-7" style="background-color: #9FF;">col-pc-7</div>
+				</div>
+				<div class="float">
+					<div class="col-pc-6" style="background-color: #98F;">col-pc-6</div>
+					<div class="col-pc-6" style="background-color: #9FF;">col-pc-6</div>
+				</div>
+				<p>"col-N"は、pcサイズ以上で分割費を維持、tabサイズ以上pcサイズ未満で2分割、spサイズで縦に並びます。</p>
+				<div class="float">
+					<div class="col-1" style="background-color: #98F;">col-1</div>
+					<div class="col-11" style="background-color: #9FF;">col-11</div>
+				</div>
+				<div class="float">
+					<div class="col-2" style="background-color: #98F;">col-2</div>
+					<div class="col-10" style="background-color: #9FF;">col-10</div>
+				</div>
+				<div class="float">
+					<div class="col-3" style="background-color: #98F;">col-3</div>
+					<div class="col-9" style="background-color: #9FF;">col-9</div>
+				</div>
+				<div class="float">
+					<div class="col-4" style="background-color: #98F;">col-4</div>
+					<div class="col-8" style="background-color: #9FF;">col-8</div>
+				</div>
+				<div class="float">
+					<div class="col-5" style="background-color: #98F;">col-5</div>
+					<div class="col-7" style="background-color: #9FF;">col-7</div>
+				</div>
+				<div class="float">
+					<div class="col-6" style="background-color: #98F;">col-6</div>
+					<div class="col-6" style="background-color: #9FF;">col-6</div>
+				</div>
+				<p>末尾にrを付けると、右寄せになります。</p>
+				<div class="float">
+					<div class="col-sp-1r" style="background-color: #98F;">1(col-sp-1r)</div>
+					<div class="col-sp-2r" style="background-color: #9FF;">2(col-sp-2r)</div>
+					<div class="col-sp-6r" style="background-color: #F89;">3(col-sp-6r)</div>
+					<div class="col-sp-3r" style="background-color: #F98;">4(col-sp-3r)</div>
+				</div>
+				<p>右寄せと左寄せを混ぜることもできます。</p>
+				<div class="float">
+					<div class="col-sp-1" style="background-color: #98F;">1(col-sp-1)</div>
+					<div class="col-sp-2r" style="background-color: #9FF;">2(col-sp-2r)</div>
+					<div class="col-sp-6" style="background-color: #F89;">3(col-sp-6)</div>
+					<div class="col-sp-3r" style="background-color: #F98;">4(col-sp-3r)</div>
+				</div>
+				<h3>flexグリッド</h3>
+				<p>親要素にclass="flex"をつけると、横方向のブロックの高さが揃います。</p>
+				<div class="flex">
+					<div class="col-sp-1" style="background-color: #98F;">1(col-sp-1)</div>
+					<div class="col-sp-2" style="background-color: #9FF;">2(col-sp-2)</div>
+					<div class="col-sp-6" style="background-color: #F89;">3(col-sp-6)</div>
+					<div class="col-sp-3" style="background-color: #F98;">4(col-sp-3)</div>
+				</div>
+				<p>"flex-r"では右寄せになります。</p>
+				<p>※この時、子要素にはrをつけてください。</p>
+				<div class="flex-r">
+					<div class="col-sp-1r" style="background-color: #98F;">1(col-sp-1r)</div>
+					<div class="col-sp-2r" style="background-color: #9FF;">2(col-sp-2r)</div>
+					<div class="col-sp-6r" style="background-color: #F89;">3(col-sp-6r)</div>
+					<div class="col-sp-3r" style="background-color: #F98;">4(col-sp-3r)</div>
+				</div>
+				<p>※親要素に"flex-r"を適用した場合、子要素にrをつけなくても右寄せになりますがflexbox非対応のブラウザでは左寄せで表示されてしまいます。</p>
+				<div class="flex-r">
+					<div class="col-sp-1" style="background-color: #98F;">1(col-sp-1)</div>
+					<div class="col-sp-2" style="background-color: #9FF;">2(col-sp-2)</div>
+					<div class="col-sp-6" style="background-color: #F89;">3(col-sp-6)</div>
+					<div class="col-sp-3" style="background-color: #F98;">4(col-sp-3)</div>
+				</div>
+
+				<h3>flex-[画面サイズ]-eq（等幅分割）</h3>
+				<p>flex-sp-eq, flex-tab-eq, flex-pc-eq のクラスを適用した場合、子要素が等幅分割されます。子要素に隙間はありません。</p>
+				<code>&lt;div class="flex-sp-eq"&gt;
+	&lt;div style="background-color: #98F;"&gt;flex-sp-eq&lt;/div&gt;
+	&lt;div style="background-color: #9FF;"&gt;2&lt;/div&gt;
+	&lt;div style="background-color: #F89;"&gt;3&lt;/div&gt;
+	&lt;div style="background-color: #F98;"&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex-tab-eq"&gt;
+	&lt;div style="background-color: #98F;"&gt;flex-tab-eq&lt;/div&gt;
+	&lt;div style="background-color: #9FF;"&gt;2&lt;/div&gt;
+	&lt;div style="background-color: #F89;"&gt;3&lt;/div&gt;
+	&lt;div style="background-color: #F98;"&gt;4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="flex-pc-eq"&gt;
+	&lt;div style="background-color: #98F;"&gt;flex-pc-eq&lt;/div&gt;
+	&lt;div style="background-color: #9FF;"&gt;2&lt;/div&gt;
+	&lt;div style="background-color: #F89;"&gt;3&lt;/div&gt;
+	&lt;div style="background-color: #F98;"&gt;4&lt;/div&gt;
+&lt;/div&gt;</code>
+				<div class="flex-sp-eq">
+					<div style="background-color: #98F;">flex-sp-eq</div>
+					<div style="background-color: #9FF;">2</div>
+					<div style="background-color: #F89;">3</div>
+					<div style="background-color: #F98;">4</div>
+				</div>
+				<div class="flex-tab-eq">
+					<div style="background-color: #98F;">flex-tab-eq</div>
+					<div style="background-color: #9FF;">2</div>
+					<div style="background-color: #F89;">3</div>
+					<div style="background-color: #F98;">4</div>
+				</div>
+				<div class="flex-pc-eq">
+					<div style="background-color: #98F;">flex-pc-eq</div>
+					<div style="background-color: #9FF;">2</div>
+					<div style="background-color: #F89;">3</div>
+					<div style="background-color: #F98;">4</div>
+				</div>
+				<p>※このクラスはdisplay:flex;を用いて表示していますが、IE8,IE10ではdisplay:table; display:table-cell;を用いて表示しています。</p>
+
+				<h3>画像配置</h3>
+				<p>imgタグに"alignleft"のクラスを付与すると、float:left;が、"alignright"を付与するとfloat:right;が適用されます。（これらのクラス名はWordPressと同じです。）</p>
+				<p><img src="250x40.png" width="250" height="40" class="alignleft" />alignleft,alignrightを付与した画像は、tabサイズ以上では最大幅は親要素の50%となり、回り込み領域を確保します。spサイズでは回り込みを解除し、最大幅は親要素の100%となります。</p>
+				<p><img src="250x40.png" width="250" height="40" class="alignright br-no" />"br-no"を併記すると、spサイズでも最大幅50%となり、回り込みも維持されます。</p>
+				<p><img src="250x40.png" width="250" height="40" class="alignleft br-tab" />逆に、tabサイズ以下で回り込みを解除したい場合は、"br-tab"を併記します。</p>
+				<p><img src="250x40.png" width="250" height="40" class="alignleft tab-center" />上記のクラスは、回り込みが解除されると画像は左側によります。tabサイズ以下で回り込みを解除し、かつ中央揃えにしたいときは、"tab-center"のクラスをつけます。</p>
+				<p><img src="250x40.png" width="250" height="40" class="alignleft sp-center" />同様に、spサイズ以下で回り込みを解除し、かつ中央揃えにしたいときは、"sp-center"をつけます。</p>
+				
+				<h3>clear, clearfix</h3>
+				<p>回り込みを解除したい要素には、クラス名"clear"を付与します。</p>
+				<p>また、子要素に指定した回り込みを後続の要素に及ぼさないようにするには、"clearfix"を付与します。</p>
+				
+				<h3>画像キャプション</h3>
+				<p>WordPressでキャプション付き画像は次のように出力されます。</p>
+<code>&lt;div class="wp-caption" style="width: 260px"&gt;
+	&lt;img alt="" 250x40.png" width="250" height="40" class="aligncenter" /&gt;
+	&lt;p class="wp-caption-text"&gt;WordPressでは記事内にキャプション付きの画像を挿入した際、このように出力されます。&lt;/p&gt;
+&lt;/div&gt;</code>
+                <p>この出力結果は次のようになります。</p>
+                <div class="wp-caption" style="width: 260px">
+                    <img alt="" src="250x40.png" class="aligncenter" />
+                    <p class="wp-caption-text">WordPressでキャプション付きの画像を挿入した際の出力に関する動作テスト。</p>
+                </div>
+                <p>※wp-captionのタグにあるwidthのスタイルは、WordPressが自動的に計算して出力します。</p>
+                <p>また、Wordpressを使わない場合、以下のように記述することが可能です。</p>
+<code>&lt;div class="caption aligncenter"&gt;
+	&lt;img alt="" src="250x40.png" class="caption-img" /&gt;
+	&lt;p class="caption-text"&gt;キャプションのコンテナに"caption"を、画像には"caption-img"を、テキストには"caption-text"を付与します。&lt;/p&gt;
+&lt;/div&gt;</code>
+                <div class="caption aligncenter">
+					<img alt="" src="250x40.png" class="caption-img" />
+					<p class="caption-text">キャプションのコンテナに"caption"を、画像には"caption-img"を、テキストには"caption-text"を付与します。</p>
+				</div>
+				<p>また、複数の画像をdivで囲み、それに"caption-img"を適用すると、その複数の画像をまたいでキャプションのテキストを表示することができます。</p>
+<code>&lt;div class="caption aligncenter"&gt;
+	&lt;div  class="caption-img"&gt;
+	  &lt;img alt="" src="250x40.png" style="margin-right:5px;" /&gt;
+	  &lt;img alt="" src="250x40.png" /&gt;
+	&lt;/div&gt;
+	&lt;p class="caption-text"&gt;2つの画像を"caption-img"を持つdivで囲んでいます。画像間の隙間は、個別にスタイルを指定して設定する必要があります。&lt;/p&gt;
+&lt;/div&gt;</code>
+				<div class="caption aligncenter">
+                	<div class="caption-img">
+                		<img src="250x40.png" style="margin-right:5px;">
+                		<img src="250x40.png">
+                	</div>
+                	<p class="caption-text">2つの画像を"caption-img"を持つdivで囲んでいます。画像間の隙間は、個別にスタイルを指定して設定する必要があります。</p>
+                </div>
+                <p>※iOSにはバグがあるため、画像間に半角スペースなどの文字が入っている場合、正しく表示されません。画像間の隙間はスタイルで指定してください。</p>
+			</div><!-- container -->
+		</section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "../src/scss/_parameter";
+code {
+	display: block;
+	margin: 10px;
+	padding: 10px;
+	border: 1px dotted #999;
+}
+
+section {
+	margin: 20px auto;
+}
+
+h2 {
+	margin-top: 1em;
+}
+
+h3 {
+	margin-top: 0.5em;
+}
+
+.jumbotron {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+.base-main {
+	background-color: #09F;
+	padding: 20px;
+}
+
+.title {
+	color: #FFF;
+	font-size: 3em;
+	margin: 20px auto 10px;
+}
+
+.lead {
+	color: #FFF;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.btn {
+	display: inline-flex;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+}
+
+.btn a {
+	font-weight: bold;
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+	color: #FFF;
+}
+
+.btn a:hover,.btn a:active {
+	text-decoration: none;
+	border: none;
+}
