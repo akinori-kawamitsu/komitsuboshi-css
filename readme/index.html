@@ -364,19 +364,17 @@ jQuery(&quot;[class^='flex'] [class^='col-']&quot;).matchHeight();
 				<p>また、複数の画像をdivで囲み、それに"caption-img"を適用すると、その複数の画像をまたいでキャプションのテキストを表示することができます。</p>
 <code>&lt;div class="caption aligncenter"&gt;
 	&lt;div  class="caption-img"&gt;
-	  &lt;img alt="" src="250x40.png" style="margin-right:5px;" /&gt;
-	  &lt;img alt="" src="250x40.png" /&gt;
+	  &lt;img alt="" src="250x40.png" style="margin-right:5px;" /&gt;&lt;img alt="" src="250x40.png" /&gt;
 	&lt;/div&gt;
 	&lt;p class="caption-text"&gt;2つの画像を"caption-img"を持つdivで囲んでいます。画像間の隙間は、個別にスタイルを指定して設定する必要があります。&lt;/p&gt;
 &lt;/div&gt;</code>
 				<div class="caption aligncenter">
                 	<div class="caption-img">
-                		<img src="250x40.png" style="margin-right:5px;">
-                		<img src="250x40.png">
+                		<img src="250x40.png" style="margin-right:5px;"><img src="250x40.png">
                 	</div>
                 	<p class="caption-text">2つの画像を"caption-img"を持つdivで囲んでいます。画像間の隙間は、個別にスタイルを指定して設定する必要があります。</p>
                 </div>
-                <p>※iOSにはバグがあるため、画像間に半角スペースなどの文字が入っている場合、正しく表示されません。画像間の隙間はスタイルで指定してください。</p>
+                <p>※iOSにはバグがあるため、画像間に半角スペースや改行が入っている場合、正しく表示されません。画像間の隙間はスタイルで指定してください。</p>
 			</div><!-- container -->
 		</section>
 	</main>
