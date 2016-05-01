@@ -24,29 +24,6 @@ code {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  clear: both;
-}
-
-h2 {
-  clear: both;
-}
-
-h3 {
-  clear: both;
-}
-
-h4 {
-  clear: both;
-}
-
-h5 {
-  clear: both;
-}
-
-h6 {
   clear: both;
 }
 

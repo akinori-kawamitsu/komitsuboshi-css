@@ -78,7 +78,8 @@
 	.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7, .col-sp-#{$num}by7 {
 		@extend %col_sp;
 	}
-	.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r {
+	.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r 
+	{
 		@extend %col_spr;
 	}
 	
@@ -106,7 +107,10 @@
 	
 	// tab margin settings
 	@for $num from 1 through 12 {
-		.col-#{$num}, .col-#{$num}r, .col-sp-#{$num}, .col-sp-#{$num}r, .col-tab-#{$num}, .col-tab-#{$num}r, .col-pc-#{$num}, .col-pc-#{$num}r {
+		.col-#{$num}, .col-#{$num}r,
+		.col-sp-#{$num}, .col-sp-#{$num}r,
+		.col-tab-#{$num}, .col-tab-#{$num}r,
+		.col-pc-#{$num}, .col-pc-#{$num}r {
 			@extend %tabmargin;
 		}
 	}
@@ -139,15 +143,18 @@
 	
 	// tab and sp width settings: 12grid;
 	@for $num from 1 through 12 {
-		.col-tab-#{$num}, .col-tab-#{$num}r, .col-sp-#{$num}, .col-sp-#{$num}r {
+		.col-tab-#{$num}, .col-tab-#{$num}r,
+		.col-sp-#{$num}, .col-sp-#{$num}r {
 			width: calc(#{100*$num/12}% - #{2*$margin_tab_col});
 		}
 	}
 	
 	@for $num from 1 through 4 {
 		// margin settings
-		.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5, .col-sp-#{$num}by5,
-		.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r, .col-sp-#{$num}by5r {
+		.col-#{$num}by5, .col-#{$num}by5r, 
+		.col-pc-#{$num}by5, .col-pc-#{$num}by5r, 
+		.col-tab-#{$num}by5, .col-tab-#{$num}by5r, 
+		.col-sp-#{$num}by5, .col-sp-#{$num}by5r {
 			@extend %tabmargin;
 		}
 
@@ -160,15 +167,18 @@
 			@extend %width_tabfull;
 		}
 		
-		.col-tab-#{$num}by5, .col-tab-#{$num}by5r, .col-sp-#{$num}by5, .col-sp-#{$num}by5r {
+		.col-tab-#{$num}by5, .col-tab-#{$num}by5r,
+		.col-sp-#{$num}by5, .col-sp-#{$num}by5r {
 			width: calc(#{20*$num}% - #{2*$margin_tab_col});
 		}
 	}
 	
 	@for $num from 1 through 6 {
 		// margin settings
-		.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7, .col-sp-#{$num}by7,
-		.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r {
+		.col-#{$num}by7, .col-#{$num}by7r, 
+		.col-pc-#{$num}by7, .col-pc-#{$num}by7r, 
+		.col-tab-#{$num}by7, .col-tab-#{$num}by7r, 
+		.col-sp-#{$num}by7, .col-sp-#{$num}by7r {
 			@extend %tabmargin;
 		}
 		
@@ -181,7 +191,8 @@
 			@extend %width_tabfull;
 		}
 
-		.col-tab-#{$num}by7, .col-tab-#{$num}by7r, .col-sp-#{$num}by7, .col-sp-#{$num}by7r {
+		.col-tab-#{$num}by7, .col-tab-#{$num}by7r, 
+		.col-sp-#{$num}by7, .col-sp-#{$num}by7r {
 			width: calc(#{(100*$num)/7}% - #{2*$margin_tab_col});
 		}
 	}
@@ -199,26 +210,36 @@
 	}
 	
 	@for $num from 1 through 12 {
-		.col-#{$num}, .col-#{$num}r, .col-pc-#{$num}, .col-pc-#{$num}r, .col-tab-#{$num}, .col-tab-#{$num}r, .col-sp-#{$num}, .col-sp-#{$num}r {
+		.col-#{$num}, .col-#{$num}r,
+		.col-pc-#{$num}, .col-pc-#{$num}r,
+		.col-tab-#{$num}, .col-tab-#{$num}r,
+		.col-sp-#{$num}, .col-sp-#{$num}r {
 			@extend %pcmargin;
 		}
 
-		.col-#{$num}, .col-#{$num}r, .col-pc-#{$num}, .col-pc-#{$num}r, .col-tab-#{$num}, .col-tab-#{$num}r, .col-sp-#{$num}, .col-sp-#{$num}r {
+		.col-#{$num}, .col-#{$num}r,
+		.col-pc-#{$num}, .col-pc-#{$num}r,
+		.col-tab-#{$num}, .col-tab-#{$num}r,
+		.col-sp-#{$num}, .col-sp-#{$num}r {
 			width: calc(#{100*$num/12}% - #{2*$margin_pc_col});
 		}
 	}
 	
 	@for $num from 1 through 4 {
-		.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5, .col-sp-#{$num}by5,
-		.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r, .col-sp-#{$num}by5r {
+		.col-#{$num}by5, .col-#{$num}by5r, 
+		.col-pc-#{$num}by5, .col-pc-#{$num}by5r, 
+		.col-tab-#{$num}by5, .col-tab-#{$num}by5r, 
+		.col-sp-#{$num}by5, .col-sp-#{$num}by5r {
 			@extend %pcmargin;
 			width: calc(#{20*$num}% - #{2*$margin_pc_col});
 		}
 	}
 	
 	@for $num from 1 through 6 {
-		.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7, .col-sp-#{$num}by7,
-		.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r {
+		.col-#{$num}by7, .col-#{$num}by7r, 
+		.col-pc-#{$num}by7, .col-pc-#{$num}by7r, 
+		.col-tab-#{$num}by7, .col-tab-#{$num}by7r, 
+		.col-sp-#{$num}by7, .col-sp-#{$num}by7r {
 			@extend %pcmargin;
 			width: calc(#{(100*$num)/7}% - #{2*$margin_pc_col});
 		}

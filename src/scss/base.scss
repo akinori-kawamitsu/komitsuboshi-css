@@ -26,12 +26,12 @@ code {
 %headingbase {
 	margin: 0;
 	padding: 0;
+	clear: both;
 }
 
 @for $i from 1 through 6 {
 	h#{$i} {
 		@extend %headingbase;
-		clear: both;
 	}
 }
 
