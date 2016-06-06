@@ -1,9 +1,14 @@
 @charset "utf-8";
 @import "_parameter";
+.wp-caption p.wp-caption-text {
+   font-size: 14px;
+   line-height: 1.3;
+   margin: 0;
+}
 
 .wp-caption {
-   margin: $margin_sp_row $margin_sp_col;
    max-width: 100%;
+	margin-bottom: 5px;
     &::after {
         @include clearfix;
     }
@@ -14,17 +19,10 @@
 }
 
 .wp-caption img {
-   margin: 0;
+   margin: 5px auto 0;
    padding: 0;
    border: 0 none;
 }
-
-.wp-caption p.wp-caption-text {
-   font-size: 14px;
-   line-height: 1.3;
-   margin: 0;
-}
-
 .categories {
 }
 .cat-item {

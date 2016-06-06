@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../src/style.css" />
+        <title>Komitsuboshi-css component test</title>
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="../src/kcss.js" type="text/javascript"></script>
+       <script src="../src/js/togglemenu.js" type="text/javascript"></script>
+        <!--script type="text/javascript">
+		  $(function(){
+			  $("#header").load("header.html");
+		  })
+		</script-->
+		<script>
+		var ua = window.navigator.userAgent.toLowerCase();
+		if (ua.indexOf("msie 10") != -1){
+		document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+		}
+		else if (ua.indexOf("linux; u;") >0){
+		document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+		}
+		</script>
+        <!--[if lte IE 9]>
+		<script src="../src/jquery.matchHeight.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		jQuery(function() {
+			jQuery("[class^='flex'] [class^='col-']").matchHeight();
+		});
+		</script>
+		<link rel="stylesheet" type="text/css" href="../src/ie9.css" />
+		<![endif]-->
+        <!--[if lt IE 9]>
+		<script src="../src/html5shiv.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="../src/ie8.css" />
+		<![endif]-->
+    </head>
+    <body>
+      <div class="header" id="header">
+      </div><!-- header -->
+        <div class="container">
+				<nav class="drawer-top">
+					<ul class="toggle-menu drawer-container">
+						<li class="toggle2 drawer-cat"><span class="drawer-btn">menu1</span>
+							<ul class="drawer-item-container">
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu1-1</a></li>
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu1-2</a></li>
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu1-3</a></li>
+							</ul>
+						</li>
+						<li class="toggle2 drawer-cat"><span class="drawer-btn">menu2</span>
+							<ul class="drawer-item-container">
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu2-1</a></li>
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu2-2</a></li>
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu2-3</a></li>
+							</ul>
+	</li>
+						<li class="toggle2 drawer-cat"><span class="drawer-btn">menu3</span>
+							<ul class="drawer-item-container">
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu3-1</a></li>
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu3-2</a></li>
+								<li class="drawer-item"><a href="#" class="drawer-btn">menu3-3</a></li>
+							</ul>
+	</li>
+					</ul>
+           		</nav>
+           		
+            <div style="height: 200px;"></div>
+        </div><!-- container -->
+    </body>
+</html>

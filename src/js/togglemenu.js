@@ -1,6 +1,7 @@
-jQuery(document).ready(function(){
+jQuery(function($){
+$(document).ready(function(){
   $('.toggle').click(function(){
-	$(this).next('.menu1').toggleClass('visible');
+	$(this).next('.toggle-menu').toggleClass('visible');
 	$(this).toggleClass('visible');
 	$('.toggle2').removeClass('visible2');
   });
@@ -8,4 +9,5 @@ jQuery(document).ready(function(){
 	$(this).toggleClass('visible2');
 	$(this).siblings().removeClass('visible2');
   });
+});
 });

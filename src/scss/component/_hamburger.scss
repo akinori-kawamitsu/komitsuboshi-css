@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import "../_parameter";
+//ボタンのサイズ,枠線の色,および角丸のサイズ
+$burg_size: 44px;
+$burg_border_color: #66F;
+$burg_border_radius: 5px;
+//ハンバーガーアイコンの線の太さと色
+$burg_line_thick: 6px;
+$burg_line_color: #6DF;
+//タップ後の矢印の方向
+$rotate_deg: 0deg;
+// hamburger icon
+header {
+	min-height: $burg_size;
+	position: relative;
+}
+
+.btn-burg {
+	position: relative;
+	display: block;
+	border: 1px solid $burg_border_color;
+	border-radius: 0px;
+	width: $burg_size;
+	height: $burg_size;
+	border-radius: $burg_border_radius;
+	cursor: pointer;
+	transition: transform 0.1s linear;
+	z-index: 1000;
+}
+
+.btn-burg::before {
+	position: absolute;
+	display: block;
+	border-top: $burg_line_thick solid $burg_line_color;
+	border-bottom: $burg_line_thick solid $burg_line_color;
+	content: " ";
+	line-height: 0;
+	font-size: 0;
+	width: $burg_size * 0.75;
+	height: 3*$burg_line_thick;
+	top: $burg_line_thick;
+	left: 10%;
+	transition: transform 0.1s linear;
+	transition: width 0.1s linear;
+}
+
+.btn-burg::after {
+	position: absolute;
+	display: block;
+	border-top: $burg_line_thick solid $burg_line_color;
+	content: " ";
+	line-height: 0;
+	font-size: 0;
+	width: $burg_size * 0.75;
+	height: $burg_size/2;
+	margin: auto;
+	left: 10%;
+	top: $burg_line_thick*3;
+}
+
+.btn-burg.visible {
+	transform: rotate($rotate_deg);
+	transition: transform 0.1s linear;
+}
+
+.btn-burg.visible::before {
+	transform: rotate(-45deg);
+	border-left: $burg_line_thick solid $burg_line_color;
+	border-bottom: none;
+	width: 3*$burg_line_thick;
+	top: $burg_line_thick + ($burg_line_thick/2) ;
+	left: 20%;
+	border-radius: $burg_line_thick/2;
+	transition: transform 0.1s linear;
+	transition: width 0.1s linear;
+}
+
+.btn-burg.visible::after {
+	width: $burg_size*0.65;
+	left: 20%;
+}

@@ -41,6 +41,11 @@
   margin-top: 40px;
 }
 
+header {
+  min-height: 44px;
+  position: relative;
+}
+
 .btn-burg {
   position: relative;
   display: block;
@@ -51,6 +56,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.1s linear;
+  z-index: 1000;
 }
 
 .btn-burg::before {
@@ -202,27 +208,29 @@
   left: 0;
 }
 
-.drawer-left .drawer-container {
+.drawer-left > ul {
   position: absolute;
   width: 140px;
   left: -150px;
   top: 44px;
 }
-.drawer-left .drawer-container.visible {
+.drawer-left > ul.visible {
   left: 0;
 }
-.drawer-left .drawer-container drawer-cat {
+.drawer-left > ul > li {
   position: relative;
   width: 100%;
+  z-index: 1000;
 }
-.drawer-left .drawer-container .drawer-item {
+.drawer-left > ul > li > ul > li {
   width: 140px;
   min-height: 44px;
   position: relative;
   left: -150px;
   top: -44px;
+  z-index: 1000;
 }
-.drawer-left .drawer-container .visible2 .drawer-item {
+.drawer-left > ul .visible2 > ul > li {
   left: 140px;
 }
 
@@ -239,28 +247,28 @@
   transform: rotate(180deg);
 }
 
-.drawer-right .drawer-container {
+.drawer-right > ul {
   position: absolute;
   width: 140px;
   right: -150px;
   top: 44px;
 }
-.drawer-right .drawer-container.visible {
+.drawer-right > ul.visible {
   right: 0;
 }
-.drawer-right .drawer-container drawer-cat {
+.drawer-right > ul > li {
   position: relative;
   right: -150px;
   width: 100%;
 }
-.drawer-right .drawer-container .drawer-item {
+.drawer-right > ul > li > ul > li {
   width: 140px;
   min-height: 44px;
   position: relative;
   right: -150px;
   top: -44px;
 }
-.drawer-right .drawer-container .visible2 .drawer-item {
+.drawer-right > ul .visible2 > ul > li {
   right: 140px;
 }
 
@@ -268,7 +276,7 @@
   position: relative;
 }
 
-.drawer-top .drawer-container {
+.drawer-top > ul {
   position: absolute;
   left: 0;
   top: 0;
@@ -276,35 +284,39 @@
   display: table;
   table-layout: fixed;
 }
-.drawer-top .drawer-container > .drawer-cat {
+.drawer-top > ul > li {
   display: table-cell;
   text-align: center;
   position: relative;
 }
-.drawer-top .drawer-container .drawer-item-container {
+.drawer-top > ul > li > ul {
   position: absolute;
   bottom: 100%;
 }
-.drawer-top .drawer-container .visible .drawer-item-container {
+.drawer-top > ul .visible > li > ul {
   top: 0;
 }
-.drawer-top .drawer-container .drawer-item {
+.drawer-top > ul > li > ul > li {
   text-align: left;
   width: 100%;
   position: static;
   top: 0;
   left: 0;
 }
-.drawer-top .drawer-container .visible2 .drawer-item-container {
+.drawer-top > ul .visible2 > li > ul {
   top: 100%;
 }
 
 @media screen and (min-width: 480px) {
-  .drawer-widt-top {
+  .btn-burg, .btn-burg-text {
+    display: none;
+  }
+
+  .drawer-wide-top {
     position: relative;
   }
 
-  .drawer-wide-top .drawer-container {
+  .drawer-wide-top > ul {
     position: static;
     left: 0;
     top: 0;
@@ -312,28 +324,40 @@
     display: table;
     table-layout: fixed;
   }
-  .drawer-wide-top .drawer-container > .drawer-cat {
+  .drawer-wide-top > ul > li {
     display: table-cell;
     text-align: center;
     position: relative;
   }
-  .drawer-wide-top .drawer-container .drawer-item-container {
+  .drawer-wide-top > ul > li > ul {
     position: absolute;
     bottom: 100%;
   }
-  .drawer-wide-top .drawer-container .visible .drawer-item-container {
+  .drawer-wide-top > ul .visible > li > ul {
     top: 0;
   }
-  .drawer-wide-top .drawer-container .drawer-item {
+  .drawer-wide-top > ul > li > ul > li {
     text-align: left;
     width: 100%;
     position: static;
     top: 0;
     left: 0;
   }
-  .drawer-wide-top .drawer-container .visible2 .drawer-item-container {
+  .drawer-wide-top > ul .visible2 > li > ul {
     top: 100%;
   }
 }
+.pagenation {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
 
-/*# sourceMappingURL=component.css.map */
+#wpadminbar {
+  max-height: 2px;
+  overflow: hidden;
+}
+#wpadminbar :hover {
+  max-height: auto;
+}

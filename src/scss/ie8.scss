@@ -25,6 +25,7 @@
  
 %iemargin {
 	margin:  0 $margin_ie_col $margin_pc_row;
+	padding: $padding_ie;
 }
 
 %col_ie {
@@ -113,4 +114,22 @@
 	color: $color-text;
 	line-height: 1;
 	padding: 5px 3px;
+}
+
+/* hamburger button */
+.btn-burg {
+	
+	&:after {
+		display: block;
+		content: "menu";
+		font-size: 11px;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 50%;
+	}
+}
+
+/* drawer-right */
+.drawer-right {
+	right: 5px;
 }

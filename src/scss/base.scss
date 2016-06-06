@@ -147,6 +147,13 @@ img {
 	}
 }
 
+nav, nav ul, nav li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+
 @media screen and (max-width:$tabmax) {
 //　tabサイズで画像の回り込みを解消するクラス　br-tab
 	.alignleft.br-tab, .alignright.br-tab {
@@ -212,7 +219,6 @@ img {
 	width: 100%;
 	max-width: $container;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
 @media screen and (max-width:$container) {
@@ -272,10 +278,28 @@ img {
    font-size: 14px;
 }
 
+.table {
+	display: table;
+}
 
+.table-cell {
+	display: table-cell;
+}
+
+.middle-container {
+	display: table;
+}
+
+.middle-item {
+	display: table-cell;
+	vertical-align: middle;
+}
 // display control
 .tab, .pc {
 	display: none;
+}
+.sp {
+	display: block;
 }
 @media screen and (min-width:$tab) {
 	.sp {
@@ -283,6 +307,9 @@ img {
 	}
 	.tab {
 		display: block;
+	}
+	.tab-none, .tab-none * {
+		display: none!important;
 	}
 }
 
@@ -292,6 +319,9 @@ img {
 	}
 	.pc {
 		display: block;
+	}
+	.pc-none, .pc-none * {
+		display: none!important;
 	}
 }
 

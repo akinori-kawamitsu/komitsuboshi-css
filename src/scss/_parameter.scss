@@ -2,17 +2,21 @@
 // smartphone margin settings
 $margin_sp_row:10px;
 $margin_sp_col:5px;
+$padding_sp: 5px 5px;
 
 // tablet margin settings
 $margin_tab_row:15px;
 $margin_tab_col:8px;
+$padding_tab: 5px 8px;
 
 // pc margin settings
 $margin_pc_row:20px;
 $margin_pc_col:10px;
+$padding_pc: 5px 10px;
 
 // ie8 margin settings (only % unit)
 $margin_ie_col: 0.5%;
+$padding_ie: 5px 0.5%;
 
 // breackpoint settings 
 $sp:480px;

@@ -18,6 +18,7 @@
 }
 %spmargin {
 	margin:  0 $margin_sp_col $margin_sp_row;
+	padding: $padding_sp;
 }
 
 %othersp {
@@ -103,6 +104,7 @@
 	
 	%tabmargin {
 		margin: 0 $margin_tab_col $margin_tab_row;
+		padding: $padding_tab;
 	}
 	
 	// tab margin settings
@@ -207,6 +209,7 @@
 	
 	%pcmargin {
 		margin:  0 $margin_pc_col $margin_pc_row;
+		padding: $padding_pc;
 	}
 	
 	@for $num from 1 through 12 {

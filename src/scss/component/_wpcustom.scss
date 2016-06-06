@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import "_parameter";
+
+.pagenation {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+#wpadminbar {
+	max-height: 2px;
+	overflow: hidden;
+	:hover {
+		max-height: auto;
+	}
+}
