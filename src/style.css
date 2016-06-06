@@ -1,6 +1,17 @@
 @charset "UTF-8";
-/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
-/**
+/*
+Theme name: ki-orion
+Theme URI: https://github.com/akinori-kawamitsu/ki-orion
+Author: Komitsuboshi interface
+Author URI: http://komitsuboshi.com
+Description: 
+Version: 1.0
+License: MIT License
+License URI: https://opensource.org/licenses/MIT
+Tags: simple
+*/
+/* Reset CSS */
+/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
@@ -606,7 +617,6 @@ nav, nav ul, nav li {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 980px) {
@@ -993,6 +1003,7 @@ nav, nav ul, nav li {
   .col-tab-6by7, .col-tab-6by7r,
   .col-sp-6by7, .col-sp-6by7r {
     margin: 0 8px 15px;
+    padding: 5px 8px;
   }
 
   .col-1, .col-1r, .col-2, .col-2r, .col-3, .col-3r, .col-4, .col-4r, .col-5, .col-5r, .col-6, .col-6r, .col-7, .col-7r, .col-8, .col-8r, .col-9, .col-9r, .col-10, .col-10r, .col-11, .col-11r, .col-1by5, .col-1by5r, .col-2by5, .col-2by5r, .col-3by5, .col-3by5r, .col-4by5, .col-4by5r, .col-1by7, .col-1by7r, .col-2by7, .col-2by7r, .col-3by7, .col-3by7r, .col-4by7, .col-4by7r, .col-5by7, .col-5by7r, .col-6by7, .col-6by7r {
@@ -1187,6 +1198,7 @@ nav, nav ul, nav li {
   .col-tab-6by7, .col-tab-6by7r,
   .col-sp-6by7, .col-sp-6by7r {
     margin: 0 10px 20px;
+    padding: 5px 10px;
   }
 
   .col-1, .col-1r,
@@ -1477,6 +1489,11 @@ nav, nav ul, nav li {
   margin-top: 40px;
 }
 
+header {
+  min-height: 44px;
+  position: relative;
+}
+
 .btn-burg {
   position: relative;
   display: block;
@@ -1487,6 +1504,7 @@ nav, nav ul, nav li {
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.1s linear;
+  z-index: 1000;
 }
 
 .btn-burg::before {
@@ -1771,9 +1789,15 @@ nav, nav ul, nav li {
     top: 100%;
   }
 }
+.wp-caption p.wp-caption-text {
+  font-size: 14px;
+  line-height: 1.3;
+  margin: 0;
+}
+
 .wp-caption {
-  margin: 10px 5px;
   max-width: 100%;
+  margin-bottom: 5px;
 }
 .wp-caption::after {
   clear: both;
@@ -1787,15 +1811,9 @@ nav, nav ul, nav li {
 }
 
 .wp-caption img {
-  margin: 0;
+  margin: 5px auto 0;
   padding: 0;
   border: 0 none;
-}
-
-.wp-caption p.wp-caption-text {
-  font-size: 14px;
-  line-height: 1.3;
-  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

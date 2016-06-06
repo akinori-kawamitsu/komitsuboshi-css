@@ -41,6 +41,11 @@
   margin-top: 40px;
 }
 
+header {
+  min-height: 44px;
+  position: relative;
+}
+
 .btn-burg {
   position: relative;
   display: block;
@@ -51,6 +56,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: transform 0.1s linear;
+  z-index: 1000;
 }
 
 .btn-burg::before {

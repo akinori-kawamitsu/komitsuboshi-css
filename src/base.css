@@ -202,7 +202,6 @@ nav, nav ul, nav li {
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 980px) {
