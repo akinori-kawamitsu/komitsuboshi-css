@@ -1,13 +1,13 @@
 jQuery(function($){
 $(document).ready(function(){
   $('.toggle').click(function(){
-	$(this).next('.toggle-menu').toggleClass('visible');
-	$(this).toggleClass('visible');
-	$('.toggle2').removeClass('visible2');
+	$(this).next('.toggle-menu').toggleClass('dep-visible');
+	$(this).toggleClass('dep-visible');
+	$('.toggle2').removeClass('dep-visible2');
   });
   $('.toggle2').click(function(){
-	$(this).toggleClass('visible2');
-	$(this).siblings().removeClass('visible2');
+	$(this).toggleClass('dep-visible2');
+	$(this).siblings().removeClass('dep-visible2');
   });
 });
 });

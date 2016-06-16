@@ -1,11 +1,11 @@
 jQuery(document).ready(function(){
   $('.toggle').click(function(){
-	$(this).next('.menu1').toggleClass('visible');
-	$(this).toggleClass('visible');
-	$('.toggle2').removeClass('visible2');
+	$(this).next('.menu1').toggleClass('dep-visible');
+	$(this).toggleClass('dep-visible');
+	$('.toggle2').removeClass('dep-visible2');
   });
   $('.toggle2').click(function(){
-	$(this).toggleClass('visible2');
-	$(this).siblings().removeClass('visible2');
+	$(this).toggleClass('dep-visible2');
+	$(this).siblings().removeClass('dep-visible2');
   });
 });

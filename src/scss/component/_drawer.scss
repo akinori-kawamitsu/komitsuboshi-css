@@ -41,7 +41,7 @@ $drawer_breakpoint: $sp;
 	left: -#{$col_default_position};
 	top: $drawer_item_height;
 	
-	&.visible {
+	&.dep-visible {
 		left: 0;
 	}
 	
@@ -58,7 +58,7 @@ $drawer_breakpoint: $sp;
 		top: -#{$drawer_item_height};
 	}
 	
-	.visible2 .drawer-item {
+	.dep-visible2 .drawer-item {
 		left: $drawer_item_width;
 	}
 }
@@ -72,7 +72,7 @@ $drawer_breakpoint: $sp;
 .drawer-right .btn-burg {
 	position: absolute;
 	right: 0;
-	&.visible {
+	&.dep-visible {
 		transform: rotate(180deg);
 	}
 }
@@ -83,7 +83,7 @@ $drawer_breakpoint: $sp;
 	right: -#{$col_default_position};
 	top: $drawer_item_height;
 	
-	&.visible {
+	&.dep-visible {
 		right: 0;
 	}
 	
@@ -101,7 +101,7 @@ $drawer_breakpoint: $sp;
 		top: -#{$drawer_item_height};
 	}
 	
-	.visible2 .drawer-item {
+	.dep-visible2 .drawer-item {
 		right: $drawer_item_width;
 	}
 }
@@ -130,7 +130,7 @@ $drawer_breakpoint: $sp;
 		bottom: 100%;
 	}
 
-	.visible .drawer-item-container {
+	.dep-visible .drawer-item-container {
 		top: 0;
 	}
 
@@ -141,7 +141,7 @@ $drawer_breakpoint: $sp;
 		top: 0;
 		left: 0;
 	}
-	.visible2 .drawer-item-container {
+	.dep-visible2 .drawer-item-container {
 		top: 100%;
 	}
 }
@@ -173,7 +173,7 @@ $drawer_breakpoint: $sp;
 			bottom: 100%;
 		}
 		
-		.visible .drawer-item-container {
+		.dep-visible .drawer-item-container {
 			top: 0;
 		}
 		
@@ -184,7 +184,7 @@ $drawer_breakpoint: $sp;
 			top: 0;
 			left: 0;
 		}
-		.visible2 .drawer-item-container {
+		.dep-visible2 .drawer-item-container {
 			top: 100%;
 		}
 	}

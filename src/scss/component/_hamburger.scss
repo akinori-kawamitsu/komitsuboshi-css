@@ -58,12 +58,12 @@ header {
 	top: $burg_line_thick*3;
 }
 
-.btn-burg.visible {
+.btn-burg.dep-visible {
 	transform: rotate($rotate_deg);
 	transition: transform 0.1s linear;
 }
 
-.btn-burg.visible::before {
+.btn-burg.dep-visible::before {
 	transform: rotate(-45deg);
 	border-left: $burg_line_thick solid $burg_line_color;
 	border-bottom: none;
@@ -75,7 +75,7 @@ header {
 	transition: width 0.1s linear;
 }
 
-.btn-burg.visible::after {
+.btn-burg.dep-visible::after {
 	width: $burg_size*0.65;
 	left: 20%;
 }

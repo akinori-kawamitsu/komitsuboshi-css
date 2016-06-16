@@ -89,12 +89,12 @@ header {
   top: 18px;
 }
 
-.btn-burg.visible {
+.btn-burg.dep-visible {
   transform: rotate(0deg);
   transition: transform 0.1s linear;
 }
 
-.btn-burg.visible::before {
+.btn-burg.dep-visible::before {
   transform: rotate(-45deg);
   border-left: 6px solid #6DF;
   border-bottom: none;
@@ -106,7 +106,7 @@ header {
   transition: width 0.1s linear;
 }
 
-.btn-burg.visible::after {
+.btn-burg.dep-visible::after {
   width: 28.6px;
   left: 20%;
 }
@@ -157,12 +157,12 @@ header {
   top: 15px;
 }
 
-.btn-burg-text.visible {
+.btn-burg-text.dep-visible {
   transform: rotate(0deg);
   transition: transform 0.1s linear;
 }
 
-.btn-burg-text.visible::before {
+.btn-burg-text.dep-visible::before {
   transform: rotate(-45deg);
   border-left: 5px solid #6DF;
   border-bottom: none;
@@ -174,7 +174,7 @@ header {
   transition: width 0.1s linear;
 }
 
-.btn-burg-text.visible::after {
+.btn-burg-text.dep-visible::after {
   width: 28.6px;
   left: 20%;
   content: "close";
@@ -214,7 +214,7 @@ header {
   left: -150px;
   top: 44px;
 }
-.drawer-left .drawer-container.visible {
+.drawer-left .drawer-container.dep-visible {
   left: 0;
 }
 .drawer-left .drawer-container drawer-cat {
@@ -228,7 +228,7 @@ header {
   left: -150px;
   top: -44px;
 }
-.drawer-left .drawer-container .visible2 .drawer-item {
+.drawer-left .drawer-container .dep-visible2 .drawer-item {
   left: 140px;
 }
 
@@ -241,7 +241,7 @@ header {
   position: absolute;
   right: 0;
 }
-.drawer-right .btn-burg.visible {
+.drawer-right .btn-burg.dep-visible {
   transform: rotate(180deg);
 }
 
@@ -251,7 +251,7 @@ header {
   right: -150px;
   top: 44px;
 }
-.drawer-right .drawer-container.visible {
+.drawer-right .drawer-container.dep-visible {
   right: 0;
 }
 .drawer-right .drawer-container drawer-cat {
@@ -266,7 +266,7 @@ header {
   right: -150px;
   top: -44px;
 }
-.drawer-right .drawer-container .visible2 .drawer-item {
+.drawer-right .drawer-container .dep-visible2 .drawer-item {
   right: 140px;
 }
 
@@ -291,7 +291,7 @@ header {
   position: absolute;
   bottom: 100%;
 }
-.drawer-top .drawer-container .visible .drawer-item-container {
+.drawer-top .drawer-container .dep-visible .drawer-item-container {
   top: 0;
 }
 .drawer-top .drawer-container .drawer-item {
@@ -301,7 +301,7 @@ header {
   top: 0;
   left: 0;
 }
-.drawer-top .drawer-container .visible2 .drawer-item-container {
+.drawer-top .drawer-container .dep-visible2 .drawer-item-container {
   top: 100%;
 }
 
@@ -327,7 +327,7 @@ header {
     position: absolute;
     bottom: 100%;
   }
-  .drawer-wide-top .drawer-container .visible .drawer-item-container {
+  .drawer-wide-top .drawer-container .dep-visible .drawer-item-container {
     top: 0;
   }
   .drawer-wide-top .drawer-container .drawer-item {
@@ -337,7 +337,7 @@ header {
     top: 0;
     left: 0;
   }
-  .drawer-wide-top .drawer-container .visible2 .drawer-item-container {
+  .drawer-wide-top .drawer-container .dep-visible2 .drawer-item-container {
     top: 100%;
   }
 }
