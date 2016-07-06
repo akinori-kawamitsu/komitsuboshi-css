@@ -86,6 +86,83 @@
 					</ul>
 				</div>
         	</section>
+			<section>
+          		<h2>フォーム</h2>
+          			<h3>無装飾フォーム</h3>
+					<form>
+						<label for="name">input text
+						<input type="text"></label>
+						
+						<label>password field</label>
+						<input type="password" id="name">
+						
+						<label>textarea
+						<textarea></textarea></label>
+						
+						<label>Selection:
+						<select>
+							<option>AAA</option>
+							<option value="bbb">BBB</option>
+						</select></label>
+						
+						<label>selection2
+						<select>
+							<optgroup label="CCC">
+								<option label="CCA">CCA</option>
+								<option label="CCB" value="ccb">CCB</option>
+							</optgroup>
+							<optgroup label="CCC">
+								<option label="CAA">CAA</option>
+								<option label="CAB" value="ccb">CAB</option>
+							</optgroup>
+						</select></label>
+						
+						<label>selection3
+						<select size="5" name="name" multiple>
+							<option>option1</option>
+							<option>option2</option>
+							<option>option3</option>
+							<option>option4</option>
+							<option>option5</option>
+						</select></label>
+						
+						<label for="fileoption">選択
+							<input type="file" name="name" accept="application/pdf" id="fileoption"></label>
+						
+						<label for="radio-sample-1"><input type="radio" value="a1" name="radio1" id="radio-sample-1">radio1</label>
+						
+						<label for="radio-sample-2"><input type="radio" value="a0" name="radio1" id="radio-sample-2" checked>checked</label>
+						
+						
+						<label for="check-sample-1"><input type="checkbox" name="name" value="send1" id="check-sample-1">チェック1</label>
+						
+						<label for="check-sample-2"><input type="checkbox" name="name" value="send1" id="check-sample-2">チェック2</label>
+						
+						
+					  <input type="submit" value="submit" name="submit">
+					  <input type="submit" value="実行" name="enter">
+					  <input type="reset" value="reset">
+					  <input type="button" value="OK">
+					</form>
+         			
+         			<form action="" method="post">
+						<label>名前：<input type="text" name="name" size="40"></label>
+						<fieldset>
+						<legend>性別</legend>
+						<label><input type="radio" name="sex" value="male">男</label>
+						<label><input type="radio" name="sex" value="female">女</label>
+						</fieldset>
+						<fieldset>
+						<legend>趣味</legend>
+						<label><input type="checkbox" name="hobby" value="sports">スポーツ</label>
+						<label><input type="checkbox" name="hobby" value="reading">読書</label>
+						<label><input type="checkbox" name="hobby" value="music">音楽</label>
+						<label><input type="checkbox" name="hobby" value="travel">旅行</label>
+						</fieldset>
+						<input type="submit" value="送信"><input type="reset" value="リセット">
+					</form> 
+          			<h3>2列フォーム</h3>
+           	</section>
             <section>
                 <h2>画像キャプション</h2>
                 <div class="wp-caption" style="width: 310px">

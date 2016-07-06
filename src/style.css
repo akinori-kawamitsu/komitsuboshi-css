@@ -296,7 +296,7 @@ button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: none;
   /* 2 */
 }
 
@@ -415,6 +415,10 @@ a img {
 }
 
 /* style base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -516,6 +520,56 @@ img {
   height: auto;
   max-width: 100%;
   padding-top: 0.3em;
+}
+
+form, label, input, textarea, select {
+  display: block;
+}
+
+fieldset {
+  margin-top: 6px;
+}
+
+label {
+  margin: 6px 6px 0 0;
+}
+
+textarea {
+  border: #CCC 1px solid;
+  background-color: #FFF;
+  box-shadow: 0px 1px 2px 0 #CCC inset;
+}
+textarea:focus {
+  box-shadow: 0px 0px 4px 1px #5AF;
+}
+
+input[type="text"], input[type="password"] {
+  border: #CCC 1px solid;
+  background-color: #FFF;
+  box-shadow: 0px 1px 2px 0 #CCC inset;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+  box-shadow: 0px 0px 4px 1px #5AF;
+}
+input[type="submit"], input[type="reset"], input[type="button"] {
+  margin: 6px 6px 0 0;
+  border-radius: 4px;
+}
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: baseline;
+}
+
+select {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  box-shadow: 0px 1px 2px 0 #CCC inset;
 }
 
 .aligncenter {
