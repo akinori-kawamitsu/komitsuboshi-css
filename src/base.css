@@ -1,18 +1,5 @@
 @charset "UTF-8";
 /* style base */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  font-family: "游ゴシック", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  font-size: 16px;
-  word-wrap: break-word;
-}
-
 section {
   clear: both;
   padding-top: 10px;
@@ -23,36 +10,6 @@ code {
   font-size: 14px;
   font-family: Consolas, "Courier New", Courier, Monaco, monospace, "Osaka－等幅", Osaka-mono, "ＭＳ ゴシック", "MS Gothic";
   white-space: pre;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  clear: both;
-}
-
-h1 {
-  font-size: 2.6rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.3rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-  font-size: 1rem;
 }
 
 blockquote {
@@ -105,56 +62,6 @@ img {
   height: auto;
   max-width: 100%;
   padding-top: 0.3em;
-}
-
-form, label, input, textarea, select {
-  display: block;
-}
-
-fieldset {
-  margin-top: 6px;
-}
-
-label {
-  margin: 6px 6px 0 0;
-}
-
-textarea {
-  border: #CCC 1px solid;
-  background-color: #FFF;
-  box-shadow: 0px 1px 2px 0 #CCC inset;
-}
-textarea:focus {
-  box-shadow: 0px 0px 4px 1px #5AF;
-}
-
-input[type="text"], input[type="password"] {
-  border: #CCC 1px solid;
-  background-color: #FFF;
-  box-shadow: 0px 1px 2px 0 #CCC inset;
-}
-input[type="text"]:focus, input[type="password"]:focus {
-  box-shadow: 0px 0px 4px 1px #5AF;
-}
-input[type="submit"], input[type="reset"], input[type="button"] {
-  margin: 6px 6px 0 0;
-  border-radius: 4px;
-}
-input[type="radio"] {
-  display: inline-block;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-input[type="checkbox"] {
-  display: inline-block;
-  margin-right: 6px;
-  vertical-align: baseline;
-}
-
-select {
-  background-color: #FFF;
-  border: 1px solid #CCC;
-  box-shadow: 0px 1px 2px 0 #CCC inset;
 }
 
 .aligncenter {

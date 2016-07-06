@@ -1,14 +1,18 @@
 @charset "utf-8";
+@import "_parameter";
 /* Reset CSS */
-/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+/* Based on normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css
+ * 
  */
+* {
+    box-sizing: border-box;
+}
 
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
+	font-weight: 500;
 }
 
 /**
@@ -16,7 +20,12 @@ html {
  */
 
 body {
-  margin: 0;
+	margin: 0;
+	padding: 0;
+	line-height: $line_height;
+	font-family: $font_sanserif;
+	font-size: $font_size;
+	word-wrap: break-word;
 }
 
 /* HTML5 display definitions
@@ -149,9 +158,41 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+// h1 to h6 common style
+%headingbase {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		@extend %headingbase;
+	}
+}
+
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+	font-size: 2.6rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.3rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 1rem;
 }
 
 /**
@@ -201,6 +242,10 @@ sup {
 
 img {
   border-style: none;
+}
+
+a img {
+    border: none;
 }
 
 /**
@@ -301,6 +346,8 @@ html [type="button"], /* 1 */
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none; /* 2 */
+	font-size: inherit;
+	font-family: inherit;
 }
 
 /**
@@ -335,6 +382,95 @@ fieldset {
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
+
+// Reset form elements
+
+form {
+	display: block;
+}
+
+textarea {
+	display: block;
+}
+
+select {
+	display: block;
+}
+
+fieldset {
+	margin-top: 6px;
+}
+
+label {
+	display: block;
+	margin: 6px 6px 0 0;
+}
+
+textarea {
+	border: $color_form_shadow 1px solid;
+	background-color: #FFF;
+	box-shadow: 0px 1px 2px 0 $color_form_shadow inset;
+	&:focus {
+		box-shadow: 0px 0px 4px 1px $color_form_focus ;
+	}
+}
+
+input {
+	&[type="text"], &[type="password"] {
+		display: block;
+		border: $color_form_shadow 1px solid;
+		background-color: #FFF;
+		box-shadow: 0px 1px 2px 0 $color_form_shadow inset;
+		&:focus {
+			box-shadow: 0px 0px 4px 1px $color_form_focus ;
+		}
+	}
+	&[type="submit"], &[type="reset"], &[type="button"] {
+		display: block;
+		margin: 6px 6px 0 0;
+		min-width: 3.2em;
+		border: $color_form_border 1px solid;
+		border-radius: 4px;
+		background: linear-gradient(#fafafa 0%, #d6d6d6 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#d6d6d6',GradientType=0 );
+	}
+	&[type="radio"] {
+		display: inline-block;
+		margin-right: 6px;
+		vertical-align: middle;
+	}
+	&[type="checkbox"] {
+		display: inline-block;
+		margin-right: 6px;
+		vertical-align: baseline;
+	}
+	&[type="file"] {
+		display: inline-block;
+		margin: 6px 0 0;
+	}
+}
+
+select {
+	background-color: #FFF;
+	border: 1px solid $color_form_shadow;
+	box-shadow: 0px 1px 2px 0 $color_form_shadow inset;
+}
+
+option {
+	font-weight: 500;
+}
+
+@media all and (-ms-high-contrast:none) {
+	input {
+		&[type="submit"], &[type="reset"], &[type="button"] {
+			padding: 0.25em 0.38em 0;
+		}
+	}
+	select {
+		font-family: meiryo, sans-serif;
+	}
+}
+
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -405,16 +541,4 @@ textarea {
 ::-webkit-input-placeholder {
   color: inherit;
   opacity: 0.54;
-}
-
-
-/* 
-    追加リセット
-*/
-* {
-    box-sizing: border-box;
-}
-
-a img {
-    border: none; /* IE */
 }
