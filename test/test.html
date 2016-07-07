@@ -15,10 +15,13 @@
 		<script>
 		var ua = window.navigator.userAgent.toLowerCase();
 		if (ua.indexOf("msie 10") != -1){
-		document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+			document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
 		}
 		else if (ua.indexOf("linux; u;") >0){
-		document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+			document.write('<link rel="stylesheet" type="text/css" href="../src/ie10.css" />');
+		}
+		else if (ua.indexOf("chrome") != -1){
+			document.write('<link rel="stylesheet" type="text/css" href="../src/chrome.css" />');
 		}
 		</script>
         <!--[if lte IE 9]>
