@@ -2,13 +2,6 @@
 @import "_parameter";
 /* row-col grid layout */
 
-.float {
-	width: calc(100% + #{2*$margin_sp_col});
-	margin-left: (-$margin_sp_col);
-		&::after {
-			@include clearfix;
-			}
-}
 
 %colleft {
 	float: left;
@@ -35,63 +28,151 @@
 	margin: 0 $margin_sp_col $margin_sp_row;
 }
 
+.float {
+	width: calc(100% + #{2*$margin_sp_col});
+	margin-left: (-$margin_sp_col);
+		&::after {
+			@include clearfix;
+			}
+}
+.nm-left {
+	margin-left: $margin_sp_col;
+}
+.nm-right {
+	margin-right: $margin_sp_col;
+}
 @for $num from 1 through 12 {
 	// float settings
-	.col-#{$num}, .col-pc-#{$num}, .col-tab-#{$num}, .col-sp-#{$num} {
-		@extend %col_sp;
-	}	
-	.col-#{$num}r, .col-pc-#{$num}r, .col-tab-#{$num}r, .col-sp-#{$num}r {
-		@extend %col_spr;
+	.col-#{$num}, .col-pc-#{$num}, .col-tab-#{$num}, .col-#{$num}r, .col-pc-#{$num}r, .col-tab-#{$num}r {
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(100% - #{2*$margin_sp_col});
 	}
-	
-	// sp width settings
-	.col-#{$num}, .col-pc-#{$num}, .col-tab-#{$num},
-	.col-#{$num}r, .col-pc-#{$num}r, .col-tab-#{$num}r {
-		@extend %othersp;
-	}
-	
-	.col-sp-#{$num}, .col-sp-#{$num}r {
-		width: calc(#{100*$num/12}% - #{2*$margin_sp_col});
+	.col-#{$num}nm, .col-pc-#{$num}nm, .col-tab-#{$num}nm, .col-#{$num}nmr, .col-pc-#{$num}nmr, .col-tab-#{$num}nmr {
+		margin: 0 0 $margin_sp_row;
+		padding: $padding_sp;
+		width: 100%;
 	}
 }
 
 @for $num from 1 through 4 {
-	// float settings
-	.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5, .col-sp-#{$num}by5 {
-		@extend %col_sp;
+	.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5, .col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r {
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(100% - #{2*$margin_sp_col});
 	}
-	.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r, .col-sp-#{$num}by5r {
-		@extend %col_spr;
-	}
-	
-	// sp width settings
-	.col-#{$num}by5, .col-pc-#{$num}by5, .col-tab-#{$num}by5,
-	.col-#{$num}by5r, .col-pc-#{$num}by5r, .col-tab-#{$num}by5r {
-			@extend %othersp;
-	}
-	.col-sp-#{$num}by5, .col-sp-#{$num}by5r {
-		width: calc(#{20*$num}% - #{2*$margin_sp_col});
+	.col-#{$num}by5nm, .col-pc-#{$num}by5nm, .col-tab-#{$num}by5nm, .col-#{$num}by5nmr, .col-pc-#{$num}by5nmr, .col-tab-#{$num}by5nmr  {
+		margin: 0 0 $margin_sp_row;
+		padding: $padding_sp;
+		width: 100%;
 	}
 }
 
 @for $num from 1 through 6 {
-	// float settings
-	.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7, .col-sp-#{$num}by7 {
-		@extend %col_sp;
+	.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7 {
+		float: left;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(100% - #{2*$margin_sp_col});
 	}
-	.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r 
-	{
-		@extend %col_spr;
+	.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r {
+		float: right;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(100% - #{2*$margin_sp_col});
 	}
-	
-	// sp width settings
-	.col-#{$num}by7, .col-pc-#{$num}by7, .col-tab-#{$num}by7, .col-sp-#{$num}by7,
-	.col-#{$num}by7r, .col-pc-#{$num}by7r, .col-tab-#{$num}by7r, .col-sp-#{$num}by7r {
-		@extend %othersp;
+	.col-#{$num}by7nm, .col-pc-#{$num}by7nm, .col-tab-#{$num}by7nm {
+		float: left;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: 100%;
 	}
-	
-	.col-sp-#{$num}by7, .col-sp-#{$num}by7r {
+	.col-#{$num}by7nmr, .col-pc-#{$num}by7nmr, .col-tab-#{$num}by7nmr {
+		float: right;
+		margin: 0 0 $margin_sp_row;
+		padding: $padding_sp;
+		width: 100%;
+	}
+}
+
+@for $num from 1 through 12 {
+	.col-sp-#{$num} {
+		float: left;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(#{100*$num/12}% - #{2*$margin_sp_col});
+	}
+	.col-sp-#{$num}r {
+		float: right;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(#{100*$num/12}% - #{2*$margin_sp_col});
+	}
+	.col-sp-#{$num}nm {
+		float: left;
+		margin: 0 0 $margin_sp_row;
+		padding: $padding_sp;
+		width: 100% * $num /12;
+	}
+	.col-sp-#{$num}nmr {
+		float: right;
+		margin: 0 0 $margin_sp_row;
+		padding: $padding_sp;
+		width: 100% * $num/12;
+	}
+}
+
+@for $num from 1 through 4 {
+	.col-sp-#{$num}by5 {
+		float: left;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(#{20*$num}% - #{2*$margin_sp_col});
+	}
+	.col-sp-#{$num}by5r {
+		float: right;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(#{20*$num}% - #{2*$margin_sp_col});
+	}
+	.col-sp-#{$num}by5nm {
+		float: left;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: 20% * $num;
+	}
+	.col-sp-#{$num}by5nmr {
+		float: right;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: 20% * $num;
+	}
+}
+
+@for $num from 1 through 6 {
+	.col-sp-#{$num}by7 {
+		float: left;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
 		width: calc(#{(100*$num)/7}% - #{2*$margin_sp_col});
+	}
+	.col-sp-#{$num}by7r {
+		float: right;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: calc(#{(100*$num)/7}% - #{2*$margin_sp_col});
+	}
+	.col-sp-#{$num}bynm7 {
+		float: left;
+		margin: 0 $margin_sp_col $margin_sp_row;
+		padding: $padding_sp;
+		width: 100% * $num/7;
+	}
+	.col-sp-#{$num}by7nmr {
+		float: right;
+		margin: 0 0 $margin_sp_row;
+		padding: $padding_sp;
+		width:  100% * $num/7;
 	}
 }
 
