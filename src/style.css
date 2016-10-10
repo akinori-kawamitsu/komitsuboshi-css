@@ -875,128 +875,301 @@ nav, nav ul, nav li {
   line-height: 0;
 }
 
-.col-1, .col-pc-1, .col-tab-1,
-.col-1r, .col-pc-1r, .col-tab-1r, .col-2, .col-pc-2, .col-tab-2,
-.col-2r, .col-pc-2r, .col-tab-2r, .col-3, .col-pc-3, .col-tab-3,
-.col-3r, .col-pc-3r, .col-tab-3r, .col-4, .col-pc-4, .col-tab-4,
-.col-4r, .col-pc-4r, .col-tab-4r, .col-5, .col-pc-5, .col-tab-5,
-.col-5r, .col-pc-5r, .col-tab-5r, .col-6, .col-pc-6, .col-tab-6,
-.col-6r, .col-pc-6r, .col-tab-6r, .col-7, .col-pc-7, .col-tab-7,
-.col-7r, .col-pc-7r, .col-tab-7r, .col-8, .col-pc-8, .col-tab-8,
-.col-8r, .col-pc-8r, .col-tab-8r, .col-9, .col-pc-9, .col-tab-9,
-.col-9r, .col-pc-9r, .col-tab-9r, .col-10, .col-pc-10, .col-tab-10,
-.col-10r, .col-pc-10r, .col-tab-10r, .col-11, .col-pc-11, .col-tab-11,
-.col-11r, .col-pc-11r, .col-tab-11r, .col-12, .col-pc-12, .col-tab-12,
-.col-12r, .col-pc-12r, .col-tab-12r, .col-1by5, .col-pc-1by5, .col-tab-1by5,
-.col-1by5r, .col-pc-1by5r, .col-tab-1by5r, .col-2by5, .col-pc-2by5, .col-tab-2by5,
-.col-2by5r, .col-pc-2by5r, .col-tab-2by5r, .col-3by5, .col-pc-3by5, .col-tab-3by5,
-.col-3by5r, .col-pc-3by5r, .col-tab-3by5r, .col-4by5, .col-pc-4by5, .col-tab-4by5,
-.col-4by5r, .col-pc-4by5r, .col-tab-4by5r, .col-1by7, .col-pc-1by7, .col-tab-1by7, .col-sp-1by7,
-.col-1by7r, .col-pc-1by7r, .col-tab-1by7r, .col-sp-1by7r, .col-2by7, .col-pc-2by7, .col-tab-2by7, .col-sp-2by7,
-.col-2by7r, .col-pc-2by7r, .col-tab-2by7r, .col-sp-2by7r, .col-3by7, .col-pc-3by7, .col-tab-3by7, .col-sp-3by7,
-.col-3by7r, .col-pc-3by7r, .col-tab-3by7r, .col-sp-3by7r, .col-4by7, .col-pc-4by7, .col-tab-4by7, .col-sp-4by7,
-.col-4by7r, .col-pc-4by7r, .col-tab-4by7r, .col-sp-4by7r, .col-5by7, .col-pc-5by7, .col-tab-5by7, .col-sp-5by7,
-.col-5by7r, .col-pc-5by7r, .col-tab-5by7r, .col-sp-5by7r, .col-6by7, .col-pc-6by7, .col-tab-6by7, .col-sp-6by7,
-.col-6by7r, .col-pc-6by7r, .col-tab-6by7r, .col-sp-6by7r {
+.float-nm {
+  width: 100%;
+  margin: 0;
+}
+.float-nm::after {
+  clear: both;
+  content: " ";
+  display: block;
+  line-height: 0;
+}
+
+/* float settings (all grids) */
+.col-1, .col-pc-1, .col-tab-1, .col-sp-1, .col-1nm, .col-pc-1nm, .col-tab-1nm, .col-sp-1nm, .col-2, .col-pc-2, .col-tab-2, .col-sp-2, .col-2nm, .col-pc-2nm, .col-tab-2nm, .col-sp-2nm, .col-3, .col-pc-3, .col-tab-3, .col-sp-3, .col-3nm, .col-pc-3nm, .col-tab-3nm, .col-sp-3nm, .col-4, .col-pc-4, .col-tab-4, .col-sp-4, .col-4nm, .col-pc-4nm, .col-tab-4nm, .col-sp-4nm, .col-5, .col-pc-5, .col-tab-5, .col-sp-5, .col-5nm, .col-pc-5nm, .col-tab-5nm, .col-sp-5nm, .col-6, .col-pc-6, .col-tab-6, .col-sp-6, .col-6nm, .col-pc-6nm, .col-tab-6nm, .col-sp-6nm, .col-7, .col-pc-7, .col-tab-7, .col-sp-7, .col-7nm, .col-pc-7nm, .col-tab-7nm, .col-sp-7nm, .col-8, .col-pc-8, .col-tab-8, .col-sp-8, .col-8nm, .col-pc-8nm, .col-tab-8nm, .col-sp-8nm, .col-9, .col-pc-9, .col-tab-9, .col-sp-9, .col-9nm, .col-pc-9nm, .col-tab-9nm, .col-sp-9nm, .col-10, .col-pc-10, .col-tab-10, .col-sp-10, .col-10nm, .col-pc-10nm, .col-tab-10nm, .col-sp-10nm, .col-11, .col-pc-11, .col-tab-11, .col-sp-11, .col-11nm, .col-pc-11nm, .col-tab-11nm, .col-sp-11nm, .col-12, .col-pc-12, .col-tab-12, .col-sp-12, .col-12nm, .col-pc-12nm, .col-tab-12nm, .col-sp-12nm, .col-1by5, .col-pc-1by5, .col-tab-1by5, .col-sp-1by5, .col-1by5nm, .col-pc-1by5nm, .col-tab-1by5nm, .col-sp-1by5nm, .col-2by5, .col-pc-2by5, .col-tab-2by5, .col-sp-2by5, .col-2by5nm, .col-pc-2by5nm, .col-tab-2by5nm, .col-sp-2by5nm, .col-3by5, .col-pc-3by5, .col-tab-3by5, .col-sp-3by5, .col-3by5nm, .col-pc-3by5nm, .col-tab-3by5nm, .col-sp-3by5nm, .col-4by5, .col-pc-4by5, .col-tab-4by5, .col-sp-4by5, .col-4by5nm, .col-pc-4by5nm, .col-tab-4by5nm, .col-sp-4by5nm, .col-1by7, .col-pc-1by7, .col-tab-1by7, .col-sp-1by7, .col-1by7nm, .col-pc-1by7nm, .col-tab-1by7nm, .col-sp-1by7nm, .col-2by7, .col-pc-2by7, .col-tab-2by7, .col-sp-2by7, .col-2by7nm, .col-pc-2by7nm, .col-tab-2by7nm, .col-sp-2by7nm, .col-3by7, .col-pc-3by7, .col-tab-3by7, .col-sp-3by7, .col-3by7nm, .col-pc-3by7nm, .col-tab-3by7nm, .col-sp-3by7nm, .col-4by7, .col-pc-4by7, .col-tab-4by7, .col-sp-4by7, .col-4by7nm, .col-pc-4by7nm, .col-tab-4by7nm, .col-sp-4by7nm, .col-5by7, .col-pc-5by7, .col-tab-5by7, .col-sp-5by7, .col-5by7nm, .col-pc-5by7nm, .col-tab-5by7nm, .col-sp-5by7nm, .col-6by7, .col-pc-6by7, .col-tab-6by7, .col-sp-6by7, .col-6by7nm, .col-pc-6by7nm, .col-tab-6by7nm, .col-sp-6by7nm {
+  float: left;
+}
+
+.col-1r, .col-pc-1r, .col-tab-1r, .col-sp-1r, .col-1nmr, .col-pc-1nmr, .col-tab-1nmr, .col-sp-1nmr, .col-2r, .col-pc-2r, .col-tab-2r, .col-sp-2r, .col-2nmr, .col-pc-2nmr, .col-tab-2nmr, .col-sp-2nmr, .col-3r, .col-pc-3r, .col-tab-3r, .col-sp-3r, .col-3nmr, .col-pc-3nmr, .col-tab-3nmr, .col-sp-3nmr, .col-4r, .col-pc-4r, .col-tab-4r, .col-sp-4r, .col-4nmr, .col-pc-4nmr, .col-tab-4nmr, .col-sp-4nmr, .col-5r, .col-pc-5r, .col-tab-5r, .col-sp-5r, .col-5nmr, .col-pc-5nmr, .col-tab-5nmr, .col-sp-5nmr, .col-6r, .col-pc-6r, .col-tab-6r, .col-sp-6r, .col-6nmr, .col-pc-6nmr, .col-tab-6nmr, .col-sp-6nmr, .col-7r, .col-pc-7r, .col-tab-7r, .col-sp-7r, .col-7nmr, .col-pc-7nmr, .col-tab-7nmr, .col-sp-7nmr, .col-8r, .col-pc-8r, .col-tab-8r, .col-sp-8r, .col-8nmr, .col-pc-8nmr, .col-tab-8nmr, .col-sp-8nmr, .col-9r, .col-pc-9r, .col-tab-9r, .col-sp-9r, .col-9nmr, .col-pc-9nmr, .col-tab-9nmr, .col-sp-9nmr, .col-10r, .col-pc-10r, .col-tab-10r, .col-sp-10r, .col-10nmr, .col-pc-10nmr, .col-tab-10nmr, .col-sp-10nmr, .col-11r, .col-pc-11r, .col-tab-11r, .col-sp-11r, .col-11nmr, .col-pc-11nmr, .col-tab-11nmr, .col-sp-11nmr, .col-12r, .col-pc-12r, .col-tab-12r, .col-sp-12r, .col-12nmr, .col-pc-12nmr, .col-tab-12nmr, .col-sp-12nmr, .col-1by5r, .col-pc-1by5r, .col-tab-1by5r, .col-sp-1by5r, .col-1by5nmr, .col-pc-1by5nmr, .col-tab-1by5nmr, .col-sp-1by5nmr, .col-2by5r, .col-pc-2by5r, .col-tab-2by5r, .col-sp-2by5r, .col-2by5nmr, .col-pc-2by5nmr, .col-tab-2by5nmr, .col-sp-2by5nmr, .col-3by5r, .col-pc-3by5r, .col-tab-3by5r, .col-sp-3by5r, .col-3by5nmr, .col-pc-3by5nmr, .col-tab-3by5nmr, .col-sp-3by5nmr, .col-4by5r, .col-pc-4by5r, .col-tab-4by5r, .col-sp-4by5r, .col-4by5nmr, .col-pc-4by5nmr, .col-tab-4by5nmr, .col-sp-4by5nmr, .col-1by7r, .col-pc-1by7r, .col-tab-1by7r, .col-sp-1by7r, .col-1by7nmr, .col-pc-1by7nmr, .col-tab-1by7nmr, .col-sp-1by7nmr, .col-2by7r, .col-pc-2by7r, .col-tab-2by7r, .col-sp-2by7r, .col-2by7nmr, .col-pc-2by7nmr, .col-tab-2by7nmr, .col-sp-2by7nmr, .col-3by7r, .col-pc-3by7r, .col-tab-3by7r, .col-sp-3by7r, .col-3by7nmr, .col-pc-3by7nmr, .col-tab-3by7nmr, .col-sp-3by7nmr, .col-4by7r, .col-pc-4by7r, .col-tab-4by7r, .col-sp-4by7r, .col-4by7nmr, .col-pc-4by7nmr, .col-tab-4by7nmr, .col-sp-4by7nmr, .col-5by7r, .col-pc-5by7r, .col-tab-5by7r, .col-sp-5by7r, .col-5by7nmr, .col-pc-5by7nmr, .col-tab-5by7nmr, .col-sp-5by7nmr, .col-6by7r, .col-pc-6by7r, .col-tab-6by7r, .col-sp-6by7r, .col-6by7nmr, .col-pc-6by7nmr, .col-tab-6by7nmr, .col-sp-6by7nmr {
+  float: right;
+}
+
+/* width settings @sp screen */
+.col-1, .col-pc-1, .col-tab-1, .col-1r, .col-pc-1r, .col-tab-1r, .col-2, .col-pc-2, .col-tab-2, .col-2r, .col-pc-2r, .col-tab-2r, .col-3, .col-pc-3, .col-tab-3, .col-3r, .col-pc-3r, .col-tab-3r, .col-4, .col-pc-4, .col-tab-4, .col-4r, .col-pc-4r, .col-tab-4r, .col-5, .col-pc-5, .col-tab-5, .col-5r, .col-pc-5r, .col-tab-5r, .col-6, .col-pc-6, .col-tab-6, .col-6r, .col-pc-6r, .col-tab-6r, .col-7, .col-pc-7, .col-tab-7, .col-7r, .col-pc-7r, .col-tab-7r, .col-8, .col-pc-8, .col-tab-8, .col-8r, .col-pc-8r, .col-tab-8r, .col-9, .col-pc-9, .col-tab-9, .col-9r, .col-pc-9r, .col-tab-9r, .col-10, .col-pc-10, .col-tab-10, .col-10r, .col-pc-10r, .col-tab-10r, .col-11, .col-pc-11, .col-tab-11, .col-11r, .col-pc-11r, .col-tab-11r, .col-12, .col-pc-12, .col-tab-12, .col-12r, .col-pc-12r, .col-tab-12r, .col-1by5, .col-pc-1by5, .col-tab-1by5, .col-1by5r, .col-pc-1by5r, .col-tab-1by5r, .col-2by5, .col-pc-2by5, .col-tab-2by5, .col-2by5r, .col-pc-2by5r, .col-tab-2by5r, .col-3by5, .col-pc-3by5, .col-tab-3by5, .col-3by5r, .col-pc-3by5r, .col-tab-3by5r, .col-4by5, .col-pc-4by5, .col-tab-4by5, .col-4by5r, .col-pc-4by5r, .col-tab-4by5r, .col-1by7, .col-pc-1by7, .col-tab-1by7, .col-1by7r, .col-pc-1by7r, .col-tab-1by7r, .col-2by7, .col-pc-2by7, .col-tab-2by7, .col-2by7r, .col-pc-2by7r, .col-tab-2by7r, .col-3by7, .col-pc-3by7, .col-tab-3by7, .col-3by7r, .col-pc-3by7r, .col-tab-3by7r, .col-4by7, .col-pc-4by7, .col-tab-4by7, .col-4by7r, .col-pc-4by7r, .col-tab-4by7r, .col-5by7, .col-pc-5by7, .col-tab-5by7, .col-5by7r, .col-pc-5by7r, .col-tab-5by7r, .col-6by7, .col-pc-6by7, .col-tab-6by7, .col-6by7r, .col-pc-6by7r, .col-tab-6by7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(100% - 10px);
 }
 
-.col-1, .col-pc-1, .col-tab-1, .col-sp-1, .col-2, .col-pc-2, .col-tab-2, .col-sp-2, .col-3, .col-pc-3, .col-tab-3, .col-sp-3, .col-4, .col-pc-4, .col-tab-4, .col-sp-4, .col-5, .col-pc-5, .col-tab-5, .col-sp-5, .col-6, .col-pc-6, .col-tab-6, .col-sp-6, .col-7, .col-pc-7, .col-tab-7, .col-sp-7, .col-8, .col-pc-8, .col-tab-8, .col-sp-8, .col-9, .col-pc-9, .col-tab-9, .col-sp-9, .col-10, .col-pc-10, .col-tab-10, .col-sp-10, .col-11, .col-pc-11, .col-tab-11, .col-sp-11, .col-12, .col-pc-12, .col-tab-12, .col-sp-12, .col-1by5, .col-pc-1by5, .col-tab-1by5, .col-sp-1by5, .col-2by5, .col-pc-2by5, .col-tab-2by5, .col-sp-2by5, .col-3by5, .col-pc-3by5, .col-tab-3by5, .col-sp-3by5, .col-4by5, .col-pc-4by5, .col-tab-4by5, .col-sp-4by5, .col-1by7, .col-pc-1by7, .col-tab-1by7, .col-sp-1by7, .col-2by7, .col-pc-2by7, .col-tab-2by7, .col-sp-2by7, .col-3by7, .col-pc-3by7, .col-tab-3by7, .col-sp-3by7, .col-4by7, .col-pc-4by7, .col-tab-4by7, .col-sp-4by7, .col-5by7, .col-pc-5by7, .col-tab-5by7, .col-sp-5by7, .col-6by7, .col-pc-6by7, .col-tab-6by7, .col-sp-6by7 {
-  float: left;
-  margin: 0 5px 10px;
-}
-
-.col-1r, .col-pc-1r, .col-tab-1r, .col-sp-1r, .col-2r, .col-pc-2r, .col-tab-2r, .col-sp-2r, .col-3r, .col-pc-3r, .col-tab-3r, .col-sp-3r, .col-4r, .col-pc-4r, .col-tab-4r, .col-sp-4r, .col-5r, .col-pc-5r, .col-tab-5r, .col-sp-5r, .col-6r, .col-pc-6r, .col-tab-6r, .col-sp-6r, .col-7r, .col-pc-7r, .col-tab-7r, .col-sp-7r, .col-8r, .col-pc-8r, .col-tab-8r, .col-sp-8r, .col-9r, .col-pc-9r, .col-tab-9r, .col-sp-9r, .col-10r, .col-pc-10r, .col-tab-10r, .col-sp-10r, .col-11r, .col-pc-11r, .col-tab-11r, .col-sp-11r, .col-12r, .col-pc-12r, .col-tab-12r, .col-sp-12r, .col-1by5r, .col-pc-1by5r, .col-tab-1by5r, .col-sp-1by5r, .col-2by5r, .col-pc-2by5r, .col-tab-2by5r, .col-sp-2by5r, .col-3by5r, .col-pc-3by5r, .col-tab-3by5r, .col-sp-3by5r, .col-4by5r, .col-pc-4by5r, .col-tab-4by5r, .col-sp-4by5r, .col-1by7r, .col-pc-1by7r, .col-tab-1by7r, .col-sp-1by7r, .col-2by7r, .col-pc-2by7r, .col-tab-2by7r, .col-sp-2by7r, .col-3by7r, .col-pc-3by7r, .col-tab-3by7r, .col-sp-3by7r, .col-4by7r, .col-pc-4by7r, .col-tab-4by7r, .col-sp-4by7r, .col-5by7r, .col-pc-5by7r, .col-tab-5by7r, .col-sp-5by7r, .col-6by7r, .col-pc-6by7r, .col-tab-6by7r, .col-sp-6by7r {
-  float: right;
-  margin: 0 5px 10px;
+.col-1nm, .col-pc-1nm, .col-tab-1nm, .col-1nmr, .col-pc-1nmr, .col-tab-1nmr, .col-2nm, .col-pc-2nm, .col-tab-2nm, .col-2nmr, .col-pc-2nmr, .col-tab-2nmr, .col-3nm, .col-pc-3nm, .col-tab-3nm, .col-3nmr, .col-pc-3nmr, .col-tab-3nmr, .col-4nm, .col-pc-4nm, .col-tab-4nm, .col-4nmr, .col-pc-4nmr, .col-tab-4nmr, .col-5nm, .col-pc-5nm, .col-tab-5nm, .col-5nmr, .col-pc-5nmr, .col-tab-5nmr, .col-6nm, .col-pc-6nm, .col-tab-6nm, .col-6nmr, .col-pc-6nmr, .col-tab-6nmr, .col-7nm, .col-pc-7nm, .col-tab-7nm, .col-7nmr, .col-pc-7nmr, .col-tab-7nmr, .col-8nm, .col-pc-8nm, .col-tab-8nm, .col-8nmr, .col-pc-8nmr, .col-tab-8nmr, .col-9nm, .col-pc-9nm, .col-tab-9nm, .col-9nmr, .col-pc-9nmr, .col-tab-9nmr, .col-10nm, .col-pc-10nm, .col-tab-10nm, .col-10nmr, .col-pc-10nmr, .col-tab-10nmr, .col-11nm, .col-pc-11nm, .col-tab-11nm, .col-11nmr, .col-pc-11nmr, .col-tab-11nmr, .col-12nm, .col-pc-12nm, .col-tab-12nm, .col-12nmr, .col-pc-12nmr, .col-tab-12nmr, .col-1by5nm, .col-pc-1by5nm, .col-tab-1by5nm, .col-1by5nmr, .col-pc-1by5nmr, .col-tab-1by5nmr, .col-2by5nm, .col-pc-2by5nm, .col-tab-2by5nm, .col-2by5nmr, .col-pc-2by5nmr, .col-tab-2by5nmr, .col-3by5nm, .col-pc-3by5nm, .col-tab-3by5nm, .col-3by5nmr, .col-pc-3by5nmr, .col-tab-3by5nmr, .col-4by5nm, .col-pc-4by5nm, .col-tab-4by5nm, .col-4by5nmr, .col-pc-4by5nmr, .col-tab-4by5nmr, .col-1by7nm, .col-pc-1by7nm, .col-tab-1by7nm, .col-1by7nmr, .col-pc-1by7nmr, .col-tab-1by7nmr, .col-2by7nm, .col-pc-2by7nm, .col-tab-2by7nm, .col-2by7nmr, .col-pc-2by7nmr, .col-tab-2by7nmr, .col-3by7nm, .col-pc-3by7nm, .col-tab-3by7nm, .col-3by7nmr, .col-pc-3by7nmr, .col-tab-3by7nmr, .col-4by7nm, .col-pc-4by7nm, .col-tab-4by7nm, .col-4by7nmr, .col-pc-4by7nmr, .col-tab-4by7nmr, .col-5by7nm, .col-pc-5by7nm, .col-tab-5by7nm, .col-5by7nmr, .col-pc-5by7nmr, .col-tab-5by7nmr, .col-6by7nm, .col-pc-6by7nm, .col-tab-6by7nm, .col-6by7nmr, .col-pc-6by7nmr, .col-tab-6by7nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 100%;
 }
 
 .col-sp-1, .col-sp-1r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(8.33333% - 10px);
 }
 
+.col-sp-1nm, .col-sp-1nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 8.33333%;
+}
+
 .col-sp-2, .col-sp-2r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(16.66667% - 10px);
 }
 
+.col-sp-2nm, .col-sp-2nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 16.66667%;
+}
+
 .col-sp-3, .col-sp-3r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(25% - 10px);
 }
 
+.col-sp-3nm, .col-sp-3nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 25%;
+}
+
 .col-sp-4, .col-sp-4r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(33.33333% - 10px);
 }
 
+.col-sp-4nm, .col-sp-4nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 33.33333%;
+}
+
 .col-sp-5, .col-sp-5r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(41.66667% - 10px);
 }
 
+.col-sp-5nm, .col-sp-5nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 41.66667%;
+}
+
 .col-sp-6, .col-sp-6r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(50% - 10px);
 }
 
+.col-sp-6nm, .col-sp-6nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 50%;
+}
+
 .col-sp-7, .col-sp-7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(58.33333% - 10px);
 }
 
+.col-sp-7nm, .col-sp-7nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 58.33333%;
+}
+
 .col-sp-8, .col-sp-8r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(66.66667% - 10px);
 }
 
+.col-sp-8nm, .col-sp-8nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 66.66667%;
+}
+
 .col-sp-9, .col-sp-9r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(75% - 10px);
 }
 
+.col-sp-9nm, .col-sp-9nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 75%;
+}
+
 .col-sp-10, .col-sp-10r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(83.33333% - 10px);
 }
 
+.col-sp-10nm, .col-sp-10nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 83.33333%;
+}
+
 .col-sp-11, .col-sp-11r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(91.66667% - 10px);
 }
 
+.col-sp-11nm, .col-sp-11nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 91.66667%;
+}
+
 .col-sp-12, .col-sp-12r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(100% - 10px);
 }
 
+.col-sp-12nm, .col-sp-12nmr {
+  margin: 0 0 10px;
+  padding: 10px 5px;
+  width: 100%;
+}
+
 .col-sp-1by5, .col-sp-1by5r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(20% - 10px);
 }
 
+.col-sp-1by5nm, .col-sp-1by5nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 20%;
+}
+
 .col-sp-2by5, .col-sp-2by5r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(40% - 10px);
 }
 
+.col-sp-2by5nm, .col-sp-2by5nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 40%;
+}
+
 .col-sp-3by5, .col-sp-3by5r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(60% - 10px);
 }
 
+.col-sp-3by5nm, .col-sp-3by5nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 60%;
+}
+
 .col-sp-4by5, .col-sp-4by5r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(80% - 10px);
 }
 
+.col-sp-4by5nm, .col-sp-4by5nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 80%;
+}
+
 .col-sp-1by7, .col-sp-1by7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(14.28571% - 10px);
 }
 
+.col-sp-1by7nm, .col-sp-1by7nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 14.28571%;
+}
+
 .col-sp-2by7, .col-sp-2by7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(28.57143% - 10px);
 }
 
+.col-sp-2by7nm, .col-sp-2by7nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 28.57143%;
+}
+
 .col-sp-3by7, .col-sp-3by7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(42.85714% - 10px);
 }
 
+.col-sp-3by7nm, .col-sp-3by7nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 42.85714%;
+}
+
 .col-sp-4by7, .col-sp-4by7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(57.14286% - 10px);
 }
 
+.col-sp-4by7nm, .col-sp-4by7nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 57.14286%;
+}
+
 .col-sp-5by7, .col-sp-5by7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(71.42857% - 10px);
 }
 
+.col-sp-5by7nm, .col-sp-5by7nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 71.42857%;
+}
+
 .col-sp-6by7, .col-sp-6by7r {
+  margin: 0 5px 10px;
+  padding: 5px 5px;
   width: calc(85.71429% - 10px);
+}
+
+.col-sp-6by7nm, .col-sp-6by7nmr {
+  margin: 0 5px 10px;
+  padding: 10px 5px;
+  width: 85.71429%;
 }
 
 @media screen and (min-width: 481px) {
@@ -1005,85 +1178,18 @@ nav, nav ul, nav li {
     margin-left: -8px;
   }
 
-  .col-1, .col-1r,
-  .col-sp-1, .col-sp-1r,
-  .col-tab-1, .col-tab-1r,
-  .col-pc-1, .col-pc-1r, .col-2, .col-2r,
-  .col-sp-2, .col-sp-2r,
-  .col-tab-2, .col-tab-2r,
-  .col-pc-2, .col-pc-2r, .col-3, .col-3r,
-  .col-sp-3, .col-sp-3r,
-  .col-tab-3, .col-tab-3r,
-  .col-pc-3, .col-pc-3r, .col-4, .col-4r,
-  .col-sp-4, .col-sp-4r,
-  .col-tab-4, .col-tab-4r,
-  .col-pc-4, .col-pc-4r, .col-5, .col-5r,
-  .col-sp-5, .col-sp-5r,
-  .col-tab-5, .col-tab-5r,
-  .col-pc-5, .col-pc-5r, .col-6, .col-6r,
-  .col-sp-6, .col-sp-6r,
-  .col-tab-6, .col-tab-6r,
-  .col-pc-6, .col-pc-6r, .col-7, .col-7r,
-  .col-sp-7, .col-sp-7r,
-  .col-tab-7, .col-tab-7r,
-  .col-pc-7, .col-pc-7r, .col-8, .col-8r,
-  .col-sp-8, .col-sp-8r,
-  .col-tab-8, .col-tab-8r,
-  .col-pc-8, .col-pc-8r, .col-9, .col-9r,
-  .col-sp-9, .col-sp-9r,
-  .col-tab-9, .col-tab-9r,
-  .col-pc-9, .col-pc-9r, .col-10, .col-10r,
-  .col-sp-10, .col-sp-10r,
-  .col-tab-10, .col-tab-10r,
-  .col-pc-10, .col-pc-10r, .col-11, .col-11r,
-  .col-sp-11, .col-sp-11r,
-  .col-tab-11, .col-tab-11r,
-  .col-pc-11, .col-pc-11r, .col-12, .col-12r,
-  .col-sp-12, .col-sp-12r,
-  .col-tab-12, .col-tab-12r,
-  .col-pc-12, .col-pc-12r, .col-1by5, .col-1by5r,
-  .col-sp-1by5, .col-sp-1by5r,
-  .col-tab-1by5, .col-tab-1by5r,
-  .col-pc-1by5, .col-pc-1by5r, .col-2by5, .col-2by5r,
-  .col-sp-2by5, .col-sp-2by5r,
-  .col-tab-2by5, .col-tab-2by5r,
-  .col-pc-2by5, .col-pc-2by5r, .col-3by5, .col-3by5r,
-  .col-sp-3by5, .col-sp-3by5r,
-  .col-tab-3by5, .col-tab-3by5r,
-  .col-pc-3by5, .col-pc-3by5r, .col-4by5, .col-4by5r,
-  .col-sp-4by5, .col-sp-4by5r,
-  .col-tab-4by5, .col-tab-4by5r,
-  .col-pc-4by5, .col-pc-4by5r, .col-1by7, .col-1by7r,
-  .col-sp-1by7, .col-sp-1by7r,
-  .col-tab-1by7, .col-tab-1by7r,
-  .col-pc-1by7, .col-pc-1by7r, .col-2by7, .col-2by7r,
-  .col-sp-2by7, .col-sp-2by7r,
-  .col-tab-2by7, .col-tab-2by7r,
-  .col-pc-2by7, .col-pc-2by7r, .col-3by7, .col-3by7r,
-  .col-sp-3by7, .col-sp-3by7r,
-  .col-tab-3by7, .col-tab-3by7r,
-  .col-pc-3by7, .col-pc-3by7r, .col-4by7, .col-4by7r,
-  .col-sp-4by7, .col-sp-4by7r,
-  .col-tab-4by7, .col-tab-4by7r,
-  .col-pc-4by7, .col-pc-4by7r, .col-5by7, .col-5by7r,
-  .col-sp-5by7, .col-sp-5by7r,
-  .col-tab-5by7, .col-tab-5by7r,
-  .col-pc-5by7, .col-pc-5by7r, .col-6by7, .col-6by7r,
-  .col-sp-6by7, .col-sp-6by7r,
-  .col-tab-6by7, .col-tab-6by7r,
-  .col-pc-6by7, .col-pc-6by7r {
+  /* margin & padding settings @tablet screen */
+  .col-1, .col-1r, .col-sp-1, .col-sp-1r, .col-tab-1, .col-tab-1r, .col-pc-1, .col-pc-1r, .col-2, .col-2r, .col-sp-2, .col-sp-2r, .col-tab-2, .col-tab-2r, .col-pc-2, .col-pc-2r, .col-3, .col-3r, .col-sp-3, .col-sp-3r, .col-tab-3, .col-tab-3r, .col-pc-3, .col-pc-3r, .col-4, .col-4r, .col-sp-4, .col-sp-4r, .col-tab-4, .col-tab-4r, .col-pc-4, .col-pc-4r, .col-5, .col-5r, .col-sp-5, .col-sp-5r, .col-tab-5, .col-tab-5r, .col-pc-5, .col-pc-5r, .col-6, .col-6r, .col-sp-6, .col-sp-6r, .col-tab-6, .col-tab-6r, .col-pc-6, .col-pc-6r, .col-7, .col-7r, .col-sp-7, .col-sp-7r, .col-tab-7, .col-tab-7r, .col-pc-7, .col-pc-7r, .col-8, .col-8r, .col-sp-8, .col-sp-8r, .col-tab-8, .col-tab-8r, .col-pc-8, .col-pc-8r, .col-9, .col-9r, .col-sp-9, .col-sp-9r, .col-tab-9, .col-tab-9r, .col-pc-9, .col-pc-9r, .col-10, .col-10r, .col-sp-10, .col-sp-10r, .col-tab-10, .col-tab-10r, .col-pc-10, .col-pc-10r, .col-11, .col-11r, .col-sp-11, .col-sp-11r, .col-tab-11, .col-tab-11r, .col-pc-11, .col-pc-11r, .col-12, .col-12r, .col-sp-12, .col-sp-12r, .col-tab-12, .col-tab-12r, .col-pc-12, .col-pc-12r, .col-1by5, .col-1by5r, .col-sp-1by5, .col-sp-1by5r, .col-tab-1by5, .col-tab-1by5r, .col-pc-1by5, .col-pc-1by5r, .col-2by5, .col-2by5r, .col-sp-2by5, .col-sp-2by5r, .col-tab-2by5, .col-tab-2by5r, .col-pc-2by5, .col-pc-2by5r, .col-3by5, .col-3by5r, .col-sp-3by5, .col-sp-3by5r, .col-tab-3by5, .col-tab-3by5r, .col-pc-3by5, .col-pc-3by5r, .col-4by5, .col-4by5r, .col-sp-4by5, .col-sp-4by5r, .col-tab-4by5, .col-tab-4by5r, .col-pc-4by5, .col-pc-4by5r, .col-1by7, .col-1by7r, .col-sp-1by7, .col-sp-1by7r, .col-tab-1by7, .col-tab-1by7r, .col-pc-1by7, .col-pc-1by7r, .col-2by7, .col-2by7r, .col-sp-2by7, .col-sp-2by7r, .col-tab-2by7, .col-tab-2by7r, .col-pc-2by7, .col-pc-2by7r, .col-3by7, .col-3by7r, .col-sp-3by7, .col-sp-3by7r, .col-tab-3by7, .col-tab-3by7r, .col-pc-3by7, .col-pc-3by7r, .col-4by7, .col-4by7r, .col-sp-4by7, .col-sp-4by7r, .col-tab-4by7, .col-tab-4by7r, .col-pc-4by7, .col-pc-4by7r, .col-5by7, .col-5by7r, .col-sp-5by7, .col-sp-5by7r, .col-tab-5by7, .col-tab-5by7r, .col-pc-5by7, .col-pc-5by7r, .col-6by7, .col-6by7r, .col-sp-6by7, .col-sp-6by7r, .col-tab-6by7, .col-tab-6by7r, .col-pc-6by7, .col-pc-6by7r {
     margin: 0 8px 15px;
     padding: 5px 8px;
   }
 
-  .col-1, .col-1r, .col-2, .col-2r, .col-3, .col-3r, .col-4, .col-4r, .col-5, .col-5r, .col-6, .col-6r, .col-7, .col-7r, .col-8, .col-8r, .col-9, .col-9r, .col-10, .col-10r, .col-11, .col-11r, .col-1by5, .col-1by5r, .col-2by5, .col-2by5r, .col-3by5, .col-3by5r, .col-4by5, .col-4by5r, .col-1by7, .col-1by7r, .col-2by7, .col-2by7r, .col-3by7, .col-3by7r, .col-4by7, .col-4by7r, .col-5by7, .col-5by7r, .col-6by7, .col-6by7r {
-    width: calc(50% - 16px);
+  .col-1nm, .col-1nmr, .col-sp-1nm, .col-sp-1nmr, .col-tab-1nm, .col-tab-1nmr, .col-pc-1nm, .col-pc-1nmr, .col-2nm, .col-2nmr, .col-sp-2nm, .col-sp-2nmr, .col-tab-2nm, .col-tab-2nmr, .col-pc-2nm, .col-pc-2nmr, .col-3nm, .col-3nmr, .col-sp-3nm, .col-sp-3nmr, .col-tab-3nm, .col-tab-3nmr, .col-pc-3nm, .col-pc-3nmr, .col-4nm, .col-4nmr, .col-sp-4nm, .col-sp-4nmr, .col-tab-4nm, .col-tab-4nmr, .col-pc-4nm, .col-pc-4nmr, .col-5nm, .col-5nmr, .col-sp-5nm, .col-sp-5nmr, .col-tab-5nm, .col-tab-5nmr, .col-pc-5nm, .col-pc-5nmr, .col-6nm, .col-6nmr, .col-sp-6nm, .col-sp-6nmr, .col-tab-6nm, .col-tab-6nmr, .col-pc-6nm, .col-pc-6nmr, .col-7nm, .col-7nmr, .col-sp-7nm, .col-sp-7nmr, .col-tab-7nm, .col-tab-7nmr, .col-pc-7nm, .col-pc-7nmr, .col-8nm, .col-8nmr, .col-sp-8nm, .col-sp-8nmr, .col-tab-8nm, .col-tab-8nmr, .col-pc-8nm, .col-pc-8nmr, .col-9nm, .col-9nmr, .col-sp-9nm, .col-sp-9nmr, .col-tab-9nm, .col-tab-9nmr, .col-pc-9nm, .col-pc-9nmr, .col-10nm, .col-10nmr, .col-sp-10nm, .col-sp-10nmr, .col-tab-10nm, .col-tab-10nmr, .col-pc-10nm, .col-pc-10nmr, .col-11nm, .col-11nmr, .col-sp-11nm, .col-sp-11nmr, .col-tab-11nm, .col-tab-11nmr, .col-pc-11nm, .col-pc-11nmr, .col-12nm, .col-12nmr, .col-sp-12nm, .col-sp-12nmr, .col-tab-12nm, .col-tab-12nmr, .col-pc-12nm, .col-pc-12nmr, .col-1by5nm, .col-1by5nmr, .col-sp-1by5nm, .col-sp-1by5nmr, .col-tab-1by5nm, .col-tab-1by5nmr, .col-pc-1by5nm, .col-pc-1by5nmr, .col-2by5nm, .col-2by5nmr, .col-sp-2by5nm, .col-sp-2by5nmr, .col-tab-2by5nm, .col-tab-2by5nmr, .col-pc-2by5nm, .col-pc-2by5nmr, .col-3by5nm, .col-3by5nmr, .col-sp-3by5nm, .col-sp-3by5nmr, .col-tab-3by5nm, .col-tab-3by5nmr, .col-pc-3by5nm, .col-pc-3by5nmr, .col-4by5nm, .col-4by5nmr, .col-sp-4by5nm, .col-sp-4by5nmr, .col-tab-4by5nm, .col-tab-4by5nmr, .col-pc-4by5nm, .col-pc-4by5nmr, .col-1by7nm, .col-1by7nmr, .col-sp-1by7nm, .col-sp-1by7nmr, .col-tab-1by7nm, .col-tab-1by7nmr, .col-pc-1by7nm, .col-pc-1by7nmr, .col-2by7nm, .col-2by7nmr, .col-sp-2by7nm, .col-sp-2by7nmr, .col-tab-2by7nm, .col-tab-2by7nmr, .col-pc-2by7nm, .col-pc-2by7nmr, .col-3by7nm, .col-3by7nmr, .col-sp-3by7nm, .col-sp-3by7nmr, .col-tab-3by7nm, .col-tab-3by7nmr, .col-pc-3by7nm, .col-pc-3by7nmr, .col-4by7nm, .col-4by7nmr, .col-sp-4by7nm, .col-sp-4by7nmr, .col-tab-4by7nm, .col-tab-4by7nmr, .col-pc-4by7nm, .col-pc-4by7nmr, .col-5by7nm, .col-5by7nmr, .col-sp-5by7nm, .col-sp-5by7nmr, .col-tab-5by7nm, .col-tab-5by7nmr, .col-pc-5by7nm, .col-pc-5by7nmr, .col-6by7nm, .col-6by7nmr, .col-sp-6by7nm, .col-sp-6by7nmr, .col-tab-6by7nm, .col-tab-6by7nmr, .col-pc-6by7nm, .col-pc-6by7nmr {
+    margin: 0 0 15px;
+    padding: 15px 8px;
   }
 
-  .col-12, .col-12r, .col-pc-1, .col-pc-1r, .col-pc-2, .col-pc-2r, .col-pc-3, .col-pc-3r, .col-pc-4, .col-pc-4r, .col-pc-5, .col-pc-5r, .col-pc-6, .col-pc-6r, .col-pc-7, .col-pc-7r, .col-pc-8, .col-pc-8r, .col-pc-9, .col-pc-9r, .col-pc-10, .col-pc-10r, .col-pc-11, .col-pc-11r, .col-pc-12, .col-pc-12r, .col-pc-1by5, .col-pc-1by5r, .col-pc-2by5, .col-pc-2by5r, .col-pc-3by5, .col-pc-3by5r, .col-pc-4by5, .col-pc-4by5r, .col-pc-1by7, .col-pc-1by7r, .col-pc-2by7, .col-pc-2by7r, .col-pc-3by7, .col-pc-3by7r, .col-pc-4by7, .col-pc-4by7r, .col-pc-5by7, .col-pc-5by7r, .col-pc-6by7, .col-pc-6by7r {
-    width: calc(100% - 16px);
-  }
-
+  /* width settings @tablet screen */
   .col-sp-1, .col-sp-1r {
     width: calc(8.33333% - 16px);
   }
@@ -1132,54 +1238,6 @@ nav, nav ul, nav li {
     width: calc(100% - 16px);
   }
 
-  .col-tab-1, .col-tab-1r {
-    width: calc(8.33333% - 16px);
-  }
-
-  .col-tab-2, .col-tab-2r {
-    width: calc(16.66667% - 16px);
-  }
-
-  .col-tab-3, .col-tab-3r {
-    width: calc(25% - 16px);
-  }
-
-  .col-tab-4, .col-tab-4r {
-    width: calc(33.33333% - 16px);
-  }
-
-  .col-tab-5, .col-tab-5r {
-    width: calc(41.66667% - 16px);
-  }
-
-  .col-tab-6, .col-tab-6r {
-    width: calc(50% - 16px);
-  }
-
-  .col-tab-7, .col-tab-7r {
-    width: calc(58.33333% - 16px);
-  }
-
-  .col-tab-8, .col-tab-8r {
-    width: calc(66.66667% - 16px);
-  }
-
-  .col-tab-9, .col-tab-9r {
-    width: calc(75% - 16px);
-  }
-
-  .col-tab-10, .col-tab-10r {
-    width: calc(83.33333% - 16px);
-  }
-
-  .col-tab-11, .col-tab-11r {
-    width: calc(91.66667% - 16px);
-  }
-
-  .col-tab-12, .col-tab-12r {
-    width: calc(100% - 16px);
-  }
-
   .col-sp-1by5, .col-sp-1by5r {
     width: calc(20% - 16px);
   }
@@ -1193,22 +1251,6 @@ nav, nav ul, nav li {
   }
 
   .col-sp-4by5, .col-sp-4by5r {
-    width: calc(80% - 16px);
-  }
-
-  .col-tab-1by5, .col-tab-1by5r {
-    width: calc(20% - 16px);
-  }
-
-  .col-tab-2by5, .col-tab-2by5r {
-    width: calc(40% - 16px);
-  }
-
-  .col-tab-3by5, .col-tab-3by5r {
-    width: calc(60% - 16px);
-  }
-
-  .col-tab-4by5, .col-tab-4by5r {
     width: calc(80% - 16px);
   }
 
@@ -1236,28 +1278,196 @@ nav, nav ul, nav li {
     width: calc(85.71429% - 16px);
   }
 
+  .col-1, .col-1r, .col-2, .col-2r, .col-3, .col-3r, .col-4, .col-4r, .col-5, .col-5r, .col-6, .col-6r, .col-7, .col-7r, .col-8, .col-8r, .col-9, .col-9r, .col-10, .col-10r, .col-11, .col-11r, .col-1by5, .col-1by5r, .col-2by5, .col-2by5r, .col-3by5, .col-3by5r, .col-4by5, .col-4by5r, .col-1by7, .col-1by7r, .col-2by7, .col-2by7r, .col-3by7, .col-3by7r, .col-4by7, .col-4by7r, .col-5by7, .col-5by7r, .col-6by7, .col-6by7r {
+    width: calc(50% - 16px);
+  }
+
+  .col-1nm, .col-1nmr, .col-2nm, .col-2nmr, .col-3nm, .col-3nmr, .col-4nm, .col-4nmr, .col-5nm, .col-5nmr, .col-6nm, .col-6nmr, .col-7nm, .col-7nmr, .col-8nm, .col-8nmr, .col-9nm, .col-9nmr, .col-10nm, .col-10nmr, .col-11nm, .col-11nmr, .col-1by5nm, .col-1by5nmr, .col-2by5nm, .col-2by5nmr, .col-3by5nm, .col-3by5nmr, .col-4by5nm, .col-4by5nmr, .col-1by7nm, .col-1by7nmr, .col-2by7nm, .col-2by7nmr, .col-3by7nm, .col-3by7nmr, .col-4by7nm, .col-4by7nmr, .col-5by7nm, .col-5by7nmr, .col-6by7nm, .col-6by7nmr {
+    width: 50%;
+  }
+
+  .col-12, .col-12r, .col-pc-1, .col-pc-1r, .col-pc-2, .col-pc-2r, .col-pc-3, .col-pc-3r, .col-pc-4, .col-pc-4r, .col-pc-5, .col-pc-5r, .col-pc-6, .col-pc-6r, .col-pc-7, .col-pc-7r, .col-pc-8, .col-pc-8r, .col-pc-9, .col-pc-9r, .col-pc-10, .col-pc-10r, .col-pc-11, .col-pc-11r, .col-pc-12, .col-pc-12r, .col-pc-1by5, .col-pc-1by5r, .col-pc-2by5, .col-pc-2by5r, .col-pc-3by5, .col-pc-3by5r, .col-pc-4by5, .col-pc-4by5r, .col-pc-1by7, .col-pc-1by7r, .col-pc-2by7, .col-pc-2by7r, .col-pc-3by7, .col-pc-3by7r, .col-pc-4by7, .col-pc-4by7r, .col-pc-5by7, .col-pc-5by7r, .col-pc-6by7, .col-pc-6by7r {
+    width: calc(100% - 16px);
+  }
+
+  .col-12nm, .col-12nmr, .col-pc-1nm, .col-pc-1nmr, .col-pc-2nm, .col-pc-2nmr, .col-pc-3nm, .col-pc-3nmr, .col-pc-4nm, .col-pc-4nmr, .col-pc-5nm, .col-pc-5nmr, .col-pc-6nm, .col-pc-6nmr, .col-pc-7nm, .col-pc-7nmr, .col-pc-8nm, .col-pc-8nmr, .col-pc-9nm, .col-pc-9nmr, .col-pc-10nm, .col-pc-10nmr, .col-pc-11nm, .col-pc-11nmr, .col-pc-12nm, .col-pc-12nmr {
+    width: 100%;
+  }
+
+  .col-tab-1, .col-tab-1r {
+    width: calc(8.33333% - 16px);
+  }
+
+  .col-tab-1nm, .col-tab-1nmr {
+    width: 8.33333%;
+  }
+
+  .col-tab-2, .col-tab-2r {
+    width: calc(16.66667% - 16px);
+  }
+
+  .col-tab-2nm, .col-tab-2nmr {
+    width: 16.66667%;
+  }
+
+  .col-tab-3, .col-tab-3r {
+    width: calc(25% - 16px);
+  }
+
+  .col-tab-3nm, .col-tab-3nmr {
+    width: 25%;
+  }
+
+  .col-tab-4, .col-tab-4r {
+    width: calc(33.33333% - 16px);
+  }
+
+  .col-tab-4nm, .col-tab-4nmr {
+    width: 33.33333%;
+  }
+
+  .col-tab-5, .col-tab-5r {
+    width: calc(41.66667% - 16px);
+  }
+
+  .col-tab-5nm, .col-tab-5nmr {
+    width: 41.66667%;
+  }
+
+  .col-tab-6, .col-tab-6r {
+    width: calc(50% - 16px);
+  }
+
+  .col-tab-6nm, .col-tab-6nmr {
+    width: 50%;
+  }
+
+  .col-tab-7, .col-tab-7r {
+    width: calc(58.33333% - 16px);
+  }
+
+  .col-tab-7nm, .col-tab-7nmr {
+    width: 58.33333%;
+  }
+
+  .col-tab-8, .col-tab-8r {
+    width: calc(66.66667% - 16px);
+  }
+
+  .col-tab-8nm, .col-tab-8nmr {
+    width: 66.66667%;
+  }
+
+  .col-tab-9, .col-tab-9r {
+    width: calc(75% - 16px);
+  }
+
+  .col-tab-9nm, .col-tab-9nmr {
+    width: 75%;
+  }
+
+  .col-tab-10, .col-tab-10r {
+    width: calc(83.33333% - 16px);
+  }
+
+  .col-tab-10nm, .col-tab-10nmr {
+    width: 83.33333%;
+  }
+
+  .col-tab-11, .col-tab-11r {
+    width: calc(91.66667% - 16px);
+  }
+
+  .col-tab-11nm, .col-tab-11nmr {
+    width: 91.66667%;
+  }
+
+  .col-tab-12, .col-tab-12r {
+    width: calc(100% - 16px);
+  }
+
+  .col-tab-12nm, .col-tab-12nmr {
+    width: 100%;
+  }
+
+  .col-tab-1by5, .col-tab-1by5r {
+    width: calc(20% - 16px);
+  }
+
+  .col-tab-1by5nm, .col-tab-1by5nmr {
+    width: 20%;
+  }
+
+  .col-tab-2by5, .col-tab-2by5r {
+    width: calc(40% - 16px);
+  }
+
+  .col-tab-2by5nm, .col-tab-2by5nmr {
+    width: 40%;
+  }
+
+  .col-tab-3by5, .col-tab-3by5r {
+    width: calc(60% - 16px);
+  }
+
+  .col-tab-3by5nm, .col-tab-3by5nmr {
+    width: 60%;
+  }
+
+  .col-tab-4by5, .col-tab-4by5r {
+    width: calc(80% - 16px);
+  }
+
+  .col-tab-4by5nm, .col-tab-4by5nmr {
+    width: 80%;
+  }
+
   .col-tab-1by7, .col-tab-1by7r {
     width: calc(14.28571% - 16px);
+  }
+
+  .col-tab-1by7nm, .col-tab-1by7nmr {
+    width: 14.28571%;
   }
 
   .col-tab-2by7, .col-tab-2by7r {
     width: calc(28.57143% - 16px);
   }
 
+  .col-tab-2by7nm, .col-tab-2by7nmr {
+    width: 28.57143%;
+  }
+
   .col-tab-3by7, .col-tab-3by7r {
     width: calc(42.85714% - 16px);
+  }
+
+  .col-tab-3by7nm, .col-tab-3by7nmr {
+    width: 42.85714%;
   }
 
   .col-tab-4by7, .col-tab-4by7r {
     width: calc(57.14286% - 16px);
   }
 
+  .col-tab-4by7nm, .col-tab-4by7nmr {
+    width: 57.14286%;
+  }
+
   .col-tab-5by7, .col-tab-5by7r {
     width: calc(71.42857% - 16px);
   }
 
+  .col-tab-5by7nm, .col-tab-5by7nmr {
+    width: 71.42857%;
+  }
+
   .col-tab-6by7, .col-tab-6by7r {
     width: calc(85.71429% - 16px);
+  }
+
+  .col-tab-6by7nm, .col-tab-6by7nmr {
+    width: 85.71429%;
   }
 }
 @media screen and (min-width: 769px) {
@@ -1266,115 +1476,280 @@ nav, nav ul, nav li {
     margin-left: -10px;
   }
 
-  .col-1, .col-1r,
-  .col-sp-1, .col-sp-1r,
-  .col-tab-1, .col-tab-1r,
-  .col-pc-1, .col-pc-1r, .col-2, .col-2r,
-  .col-sp-2, .col-sp-2r,
-  .col-tab-2, .col-tab-2r,
-  .col-pc-2, .col-pc-2r, .col-3, .col-3r,
-  .col-sp-3, .col-sp-3r,
-  .col-tab-3, .col-tab-3r,
-  .col-pc-3, .col-pc-3r, .col-4, .col-4r,
-  .col-sp-4, .col-sp-4r,
-  .col-tab-4, .col-tab-4r,
-  .col-pc-4, .col-pc-4r, .col-5, .col-5r,
-  .col-sp-5, .col-sp-5r,
-  .col-tab-5, .col-tab-5r,
-  .col-pc-5, .col-pc-5r, .col-6, .col-6r,
-  .col-sp-6, .col-sp-6r,
-  .col-tab-6, .col-tab-6r,
-  .col-pc-6, .col-pc-6r, .col-7, .col-7r,
-  .col-sp-7, .col-sp-7r,
-  .col-tab-7, .col-tab-7r,
-  .col-pc-7, .col-pc-7r, .col-8, .col-8r,
-  .col-sp-8, .col-sp-8r,
-  .col-tab-8, .col-tab-8r,
-  .col-pc-8, .col-pc-8r, .col-9, .col-9r,
-  .col-sp-9, .col-sp-9r,
-  .col-tab-9, .col-tab-9r,
-  .col-pc-9, .col-pc-9r, .col-10, .col-10r,
-  .col-sp-10, .col-sp-10r,
-  .col-tab-10, .col-tab-10r,
-  .col-pc-10, .col-pc-10r, .col-11, .col-11r,
-  .col-sp-11, .col-sp-11r,
-  .col-tab-11, .col-tab-11r,
-  .col-pc-11, .col-pc-11r, .col-12, .col-12r,
-  .col-sp-12, .col-sp-12r,
-  .col-tab-12, .col-tab-12r,
-  .col-pc-12, .col-pc-12r, .col-1by5, .col-1by5r,
-  .col-sp-1by5, .col-sp-1by5r, .col-2by5, .col-2by5r,
-  .col-sp-2by5, .col-sp-2by5r, .col-3by5, .col-3by5r,
-  .col-sp-3by5, .col-sp-3by5r, .col-4by5, .col-4by5r,
-  .col-sp-4by5, .col-sp-4by5r, .col-tab-1by5, .col-tab-1by5r, .col-tab-2by5, .col-tab-2by5r, .col-tab-3by5, .col-tab-3by5r, .col-tab-4by5, .col-tab-4by5r, .col-pc-1by5, .col-pc-1by5r, .col-pc-2by5, .col-pc-2by5r, .col-pc-3by5, .col-pc-3by5r, .col-pc-4by5, .col-pc-4by5r, .col-1by7, .col-1by7r,
-  .col-sp-1by7, .col-sp-1by7r, .col-2by7, .col-2by7r,
-  .col-sp-2by7, .col-sp-2by7r, .col-3by7, .col-3by7r,
-  .col-sp-3by7, .col-sp-3by7r, .col-4by7, .col-4by7r,
-  .col-sp-4by7, .col-sp-4by7r, .col-5by7, .col-5by7r,
-  .col-sp-5by7, .col-sp-5by7r, .col-6by7, .col-6by7r,
-  .col-sp-6by7, .col-sp-6by7r, .col-tab-1by7, .col-tab-1by7r, .col-tab-2by7, .col-tab-2by7r, .col-tab-3by7, .col-tab-3by7r, .col-tab-4by7, .col-tab-4by7r, .col-tab-5by7, .col-tab-5by7r, .col-tab-6by7, .col-tab-6by7r, .col-pc-1by7, .col-pc-1by7r, .col-pc-2by7, .col-pc-2by7r, .col-pc-3by7, .col-pc-3by7r, .col-pc-4by7, .col-pc-4by7r, .col-pc-5by7, .col-pc-5by7r, .col-pc-6by7, .col-pc-6by7r {
+  .col-1, .col-1r, .col-sp-1, .col-sp-1r, .col-tab-1, .col-tab-1r, .col-pc-1, .col-pc-1r, .col-2, .col-2r, .col-sp-2, .col-sp-2r, .col-tab-2, .col-tab-2r, .col-pc-2, .col-pc-2r, .col-3, .col-3r, .col-sp-3, .col-sp-3r, .col-tab-3, .col-tab-3r, .col-pc-3, .col-pc-3r, .col-4, .col-4r, .col-sp-4, .col-sp-4r, .col-tab-4, .col-tab-4r, .col-pc-4, .col-pc-4r, .col-5, .col-5r, .col-sp-5, .col-sp-5r, .col-tab-5, .col-tab-5r, .col-pc-5, .col-pc-5r, .col-6, .col-6r, .col-sp-6, .col-sp-6r, .col-tab-6, .col-tab-6r, .col-pc-6, .col-pc-6r, .col-7, .col-7r, .col-sp-7, .col-sp-7r, .col-tab-7, .col-tab-7r, .col-pc-7, .col-pc-7r, .col-8, .col-8r, .col-sp-8, .col-sp-8r, .col-tab-8, .col-tab-8r, .col-pc-8, .col-pc-8r, .col-9, .col-9r, .col-sp-9, .col-sp-9r, .col-tab-9, .col-tab-9r, .col-pc-9, .col-pc-9r, .col-10, .col-10r, .col-sp-10, .col-sp-10r, .col-tab-10, .col-tab-10r, .col-pc-10, .col-pc-10r, .col-11, .col-11r, .col-sp-11, .col-sp-11r, .col-tab-11, .col-tab-11r, .col-pc-11, .col-pc-11r, .col-12, .col-12r, .col-sp-12, .col-sp-12r, .col-tab-12, .col-tab-12r, .col-pc-12, .col-pc-12r, .col-1by5, .col-1by5r, .col-2by5, .col-2by5r, .col-3by5, .col-3by5r, .col-4by5, .col-4by5r, .col-1by7, .col-1by7r, .col-2by7, .col-2by7r, .col-3by7, .col-3by7r, .col-4by7, .col-4by7r, .col-5by7, .col-5by7r, .col-6by7, .col-6by7r, .col-sp-1by5, .col-sp-1by5r, .col-sp-2by5, .col-sp-2by5r, .col-sp-3by5, .col-sp-3by5r, .col-sp-4by5, .col-sp-4by5r, .col-sp-1by7, .col-sp-1by7r, .col-sp-2by7, .col-sp-2by7r, .col-sp-3by7, .col-sp-3by7r, .col-sp-4by7, .col-sp-4by7r, .col-sp-5by7, .col-sp-5by7r, .col-sp-6by7, .col-sp-6by7r, .col-tab-1by5, .col-tab-1by5r, .col-tab-2by5, .col-tab-2by5r, .col-tab-3by5, .col-tab-3by5r, .col-tab-4by5, .col-tab-4by5r, .col-tab-1by7, .col-tab-1by7r, .col-tab-2by7, .col-tab-2by7r, .col-tab-3by7, .col-tab-3by7r, .col-tab-4by7, .col-tab-4by7r, .col-tab-5by7, .col-tab-5by7r, .col-tab-6by7, .col-tab-6by7r {
     margin: 0 10px 20px;
     padding: 5px 10px;
   }
 
-  .col-1, .col-1r,
+  .col-1nm, .col-1nmr, .col-sp-1nm, .col-sp-1nmr, .col-tab-1nm, .col-tab-1nmr, .col-pc-1nm, .col-pc-1nmr, .col-2nm, .col-2nmr, .col-sp-2nm, .col-sp-2nmr, .col-tab-2nm, .col-tab-2nmr, .col-pc-2nm, .col-pc-2nmr, .col-3nm, .col-3nmr, .col-sp-3nm, .col-sp-3nmr, .col-tab-3nm, .col-tab-3nmr, .col-pc-3nm, .col-pc-3nmr, .col-4nm, .col-4nmr, .col-sp-4nm, .col-sp-4nmr, .col-tab-4nm, .col-tab-4nmr, .col-pc-4nm, .col-pc-4nmr, .col-5nm, .col-5nmr, .col-sp-5nm, .col-sp-5nmr, .col-tab-5nm, .col-tab-5nmr, .col-pc-5nm, .col-pc-5nmr, .col-6nm, .col-6nmr, .col-sp-6nm, .col-sp-6nmr, .col-tab-6nm, .col-tab-6nmr, .col-pc-6nm, .col-pc-6nmr, .col-7nm, .col-7nmr, .col-sp-7nm, .col-sp-7nmr, .col-tab-7nm, .col-tab-7nmr, .col-pc-7nm, .col-pc-7nmr, .col-8nm, .col-8nmr, .col-sp-8nm, .col-sp-8nmr, .col-tab-8nm, .col-tab-8nmr, .col-pc-8nm, .col-pc-8nmr, .col-9nm, .col-9nmr, .col-sp-9nm, .col-sp-9nmr, .col-tab-9nm, .col-tab-9nmr, .col-pc-9nm, .col-pc-9nmr, .col-10nm, .col-10nmr, .col-sp-10nm, .col-sp-10nmr, .col-tab-10nm, .col-tab-10nmr, .col-pc-10nm, .col-pc-10nmr, .col-11nm, .col-11nmr, .col-sp-11nm, .col-sp-11nmr, .col-tab-11nm, .col-tab-11nmr, .col-pc-11nm, .col-pc-11nmr, .col-12nm, .col-12nmr, .col-sp-12nm, .col-sp-12nmr, .col-tab-12nm, .col-tab-12nmr, .col-pc-12nm, .col-pc-12nmr, .col-1by5nm, .col-1by5nmr, .col-2by5nm, .col-2by5nmr, .col-3by5nm, .col-3by5nmr, .col-4by5nm, .col-4by5nmr, .col-1by7nm, .col-1by7nmr, .col-2by7nm, .col-2by7nmr, .col-3by7nm, .col-3by7nmr, .col-4by7nm, .col-4by7nmr, .col-5by7nm, .col-5by7nmr, .col-6by7nm, .col-6by7nmr {
+    margin: 0 0 20px;
+    padding: 20px 10px;
+  }
+
+  /* margin settings @pc screen */
+  /* width settings @pc screen */
+  .col-1, .col-1r {
+    width: calc(8.33333% - 20px);
+  }
+
+  .col-1nm, .col-1nmr {
+    width: 8.33333%;
+  }
+
+  .col-2, .col-2r {
+    width: calc(16.66667% - 20px);
+  }
+
+  .col-2nm, .col-2nmr {
+    width: 16.66667%;
+  }
+
+  .col-3, .col-3r {
+    width: calc(25% - 20px);
+  }
+
+  .col-3nm, .col-3nmr {
+    width: 25%;
+  }
+
+  .col-4, .col-4r {
+    width: calc(33.33333% - 20px);
+  }
+
+  .col-4nm, .col-4nmr {
+    width: 33.33333%;
+  }
+
+  .col-5, .col-5r {
+    width: calc(41.66667% - 20px);
+  }
+
+  .col-5nm, .col-5nmr {
+    width: 41.66667%;
+  }
+
+  .col-6, .col-6r {
+    width: calc(50% - 20px);
+  }
+
+  .col-6nm, .col-6nmr {
+    width: 50%;
+  }
+
+  .col-7, .col-7r {
+    width: calc(58.33333% - 20px);
+  }
+
+  .col-7nm, .col-7nmr {
+    width: 58.33333%;
+  }
+
+  .col-8, .col-8r {
+    width: calc(66.66667% - 20px);
+  }
+
+  .col-8nm, .col-8nmr {
+    width: 66.66667%;
+  }
+
+  .col-9, .col-9r {
+    width: calc(75% - 20px);
+  }
+
+  .col-9nm, .col-9nmr {
+    width: 75%;
+  }
+
+  .col-10, .col-10r {
+    width: calc(83.33333% - 20px);
+  }
+
+  .col-10nm, .col-10nmr {
+    width: 83.33333%;
+  }
+
+  .col-11, .col-11r {
+    width: calc(91.66667% - 20px);
+  }
+
+  .col-11nm, .col-11nmr {
+    width: 91.66667%;
+  }
+
+  .col-12, .col-12r {
+    width: calc(100% - 20px);
+  }
+
+  .col-12nm, .col-12nmr {
+    width: 100%;
+  }
+
+  .col-1by5, .col-1by5r {
+    width: calc(20% - 20px);
+  }
+
+  .col-1by5nm, .col-1by5nmr {
+    width: calc(20% - 20px);
+  }
+
+  .col-2by5, .col-2by5r {
+    width: calc(40% - 20px);
+  }
+
+  .col-2by5nm, .col-2by5nmr {
+    width: calc(40% - 20px);
+  }
+
+  .col-3by5, .col-3by5r {
+    width: calc(60% - 20px);
+  }
+
+  .col-3by5nm, .col-3by5nmr {
+    width: calc(60% - 20px);
+  }
+
+  .col-4by5, .col-4by5r {
+    width: calc(80% - 20px);
+  }
+
+  .col-4by5nm, .col-4by5nmr {
+    width: calc(80% - 20px);
+  }
+
+  .col-1by7, .col-1by7r {
+    width: calc(14.28571% - 20px);
+  }
+
+  .col-1by7nm, .col-1by7nmr {
+    width: calc(14.28571% - 20px);
+  }
+
+  .col-2by7, .col-2by7r {
+    width: calc(28.57143% - 20px);
+  }
+
+  .col-2by7nm, .col-2by7nmr {
+    width: calc(28.57143% - 20px);
+  }
+
+  .col-3by7, .col-3by7r {
+    width: calc(42.85714% - 20px);
+  }
+
+  .col-3by7nm, .col-3by7nmr {
+    width: calc(42.85714% - 20px);
+  }
+
+  .col-4by7, .col-4by7r {
+    width: calc(57.14286% - 20px);
+  }
+
+  .col-4by7nm, .col-4by7nmr {
+    width: calc(57.14286% - 20px);
+  }
+
+  .col-5by7, .col-5by7r {
+    width: calc(71.42857% - 20px);
+  }
+
+  .col-5by7nm, .col-5by7nmr {
+    width: calc(71.42857% - 20px);
+  }
+
+  .col-6by7, .col-6by7r {
+    width: calc(85.71429% - 20px);
+  }
+
+  .col-6by7nm, .col-6by7nmr {
+    width: calc(85.71429% - 20px);
+  }
+
   .col-sp-1, .col-sp-1r {
     width: calc(8.33333% - 20px);
   }
 
-  .col-2, .col-2r,
   .col-sp-2, .col-sp-2r {
     width: calc(16.66667% - 20px);
   }
 
-  .col-3, .col-3r,
   .col-sp-3, .col-sp-3r {
     width: calc(25% - 20px);
   }
 
-  .col-4, .col-4r,
   .col-sp-4, .col-sp-4r {
     width: calc(33.33333% - 20px);
   }
 
-  .col-5, .col-5r,
   .col-sp-5, .col-sp-5r {
     width: calc(41.66667% - 20px);
   }
 
-  .col-6, .col-6r,
   .col-sp-6, .col-sp-6r {
     width: calc(50% - 20px);
   }
 
-  .col-7, .col-7r,
   .col-sp-7, .col-sp-7r {
     width: calc(58.33333% - 20px);
   }
 
-  .col-8, .col-8r,
   .col-sp-8, .col-sp-8r {
     width: calc(66.66667% - 20px);
   }
 
-  .col-9, .col-9r,
   .col-sp-9, .col-sp-9r {
     width: calc(75% - 20px);
   }
 
-  .col-10, .col-10r,
   .col-sp-10, .col-sp-10r {
     width: calc(83.33333% - 20px);
   }
 
-  .col-11, .col-11r,
   .col-sp-11, .col-sp-11r {
     width: calc(91.66667% - 20px);
   }
 
-  .col-12, .col-12r,
   .col-sp-12, .col-sp-12r {
     width: calc(100% - 20px);
+  }
+
+  .col-sp-1by5, .col-sp-1by5r {
+    width: calc(20% - 20px);
+  }
+
+  .col-sp-2by5, .col-sp-2by5r {
+    width: calc(40% - 20px);
+  }
+
+  .col-sp-3by5, .col-sp-3by5r {
+    width: calc(60% - 20px);
+  }
+
+  .col-sp-4by5, .col-sp-4by5r {
+    width: calc(80% - 20px);
+  }
+
+  .col-sp-1by7, .col-sp-1by7r {
+    width: calc(14.28571% - 20px);
+  }
+
+  .col-sp-2by7, .col-sp-2by7r {
+    width: calc(28.57143% - 20px);
+  }
+
+  .col-sp-3by7, .col-sp-3by7r {
+    width: calc(42.85714% - 20px);
+  }
+
+  .col-sp-4by7, .col-sp-4by7r {
+    width: calc(57.14286% - 20px);
+  }
+
+  .col-sp-5by7, .col-sp-5by7r {
+    width: calc(71.42857% - 20px);
+  }
+
+  .col-sp-6by7, .col-sp-6by7r {
+    width: calc(85.71429% - 20px);
   }
 
   .col-tab-1, .col-tab-1r {
@@ -1425,74 +1800,6 @@ nav, nav ul, nav li {
     width: calc(100% - 20px);
   }
 
-  .col-pc-1, .col-pc-1r {
-    width: calc(8.33333% - 20px);
-  }
-
-  .col-pc-2, .col-pc-2r {
-    width: calc(16.66667% - 20px);
-  }
-
-  .col-pc-3, .col-pc-3r {
-    width: calc(25% - 20px);
-  }
-
-  .col-pc-4, .col-pc-4r {
-    width: calc(33.33333% - 20px);
-  }
-
-  .col-pc-5, .col-pc-5r {
-    width: calc(41.66667% - 20px);
-  }
-
-  .col-pc-6, .col-pc-6r {
-    width: calc(50% - 20px);
-  }
-
-  .col-pc-7, .col-pc-7r {
-    width: calc(58.33333% - 20px);
-  }
-
-  .col-pc-8, .col-pc-8r {
-    width: calc(66.66667% - 20px);
-  }
-
-  .col-pc-9, .col-pc-9r {
-    width: calc(75% - 20px);
-  }
-
-  .col-pc-10, .col-pc-10r {
-    width: calc(83.33333% - 20px);
-  }
-
-  .col-pc-11, .col-pc-11r {
-    width: calc(91.66667% - 20px);
-  }
-
-  .col-pc-12, .col-pc-12r {
-    width: calc(100% - 20px);
-  }
-
-  .col-1by5, .col-1by5r,
-  .col-sp-1by5, .col-sp-1by5r {
-    width: calc(20% - 20px);
-  }
-
-  .col-2by5, .col-2by5r,
-  .col-sp-2by5, .col-sp-2by5r {
-    width: calc(40% - 20px);
-  }
-
-  .col-3by5, .col-3by5r,
-  .col-sp-3by5, .col-sp-3by5r {
-    width: calc(60% - 20px);
-  }
-
-  .col-4by5, .col-4by5r,
-  .col-sp-4by5, .col-sp-4by5r {
-    width: calc(80% - 20px);
-  }
-
   .col-tab-1by5, .col-tab-1by5r {
     width: calc(20% - 20px);
   }
@@ -1507,52 +1814,6 @@ nav, nav ul, nav li {
 
   .col-tab-4by5, .col-tab-4by5r {
     width: calc(80% - 20px);
-  }
-
-  .col-pc-1by5, .col-pc-1by5r {
-    width: calc(20% - 20px);
-  }
-
-  .col-pc-2by5, .col-pc-2by5r {
-    width: calc(40% - 20px);
-  }
-
-  .col-pc-3by5, .col-pc-3by5r {
-    width: calc(60% - 20px);
-  }
-
-  .col-pc-4by5, .col-pc-4by5r {
-    width: calc(80% - 20px);
-  }
-
-  .col-1by7, .col-1by7r,
-  .col-sp-1by7, .col-sp-1by7r {
-    width: calc(14.28571% - 20px);
-  }
-
-  .col-2by7, .col-2by7r,
-  .col-sp-2by7, .col-sp-2by7r {
-    width: calc(28.57143% - 20px);
-  }
-
-  .col-3by7, .col-3by7r,
-  .col-sp-3by7, .col-sp-3by7r {
-    width: calc(42.85714% - 20px);
-  }
-
-  .col-4by7, .col-4by7r,
-  .col-sp-4by7, .col-sp-4by7r {
-    width: calc(57.14286% - 20px);
-  }
-
-  .col-5by7, .col-5by7r,
-  .col-sp-5by7, .col-sp-5by7r {
-    width: calc(71.42857% - 20px);
-  }
-
-  .col-6by7, .col-6by7r,
-  .col-sp-6by7, .col-sp-6by7r {
-    width: calc(85.71429% - 20px);
   }
 
   .col-tab-1by7, .col-tab-1by7r {
@@ -1579,28 +1840,356 @@ nav, nav ul, nav li {
     width: calc(85.71429% - 20px);
   }
 
+  .col-1, .col-1r {
+    width: calc(8.33333% - 20px);
+  }
+
+  .col-1nm, .col-1nmr {
+    width: 8.33333%;
+  }
+
+  .col-2, .col-2r {
+    width: calc(16.66667% - 20px);
+  }
+
+  .col-2nm, .col-2nmr {
+    width: 16.66667%;
+  }
+
+  .col-3, .col-3r {
+    width: calc(25% - 20px);
+  }
+
+  .col-3nm, .col-3nmr {
+    width: 25%;
+  }
+
+  .col-4, .col-4r {
+    width: calc(33.33333% - 20px);
+  }
+
+  .col-4nm, .col-4nmr {
+    width: 33.33333%;
+  }
+
+  .col-5, .col-5r {
+    width: calc(41.66667% - 20px);
+  }
+
+  .col-5nm, .col-5nmr {
+    width: 41.66667%;
+  }
+
+  .col-6, .col-6r {
+    width: calc(50% - 20px);
+  }
+
+  .col-6nm, .col-6nmr {
+    width: 50%;
+  }
+
+  .col-7, .col-7r {
+    width: calc(58.33333% - 20px);
+  }
+
+  .col-7nm, .col-7nmr {
+    width: 58.33333%;
+  }
+
+  .col-8, .col-8r {
+    width: calc(66.66667% - 20px);
+  }
+
+  .col-8nm, .col-8nmr {
+    width: 66.66667%;
+  }
+
+  .col-9, .col-9r {
+    width: calc(75% - 20px);
+  }
+
+  .col-9nm, .col-9nmr {
+    width: 75%;
+  }
+
+  .col-10, .col-10r {
+    width: calc(83.33333% - 20px);
+  }
+
+  .col-10nm, .col-10nmr {
+    width: 83.33333%;
+  }
+
+  .col-11, .col-11r {
+    width: calc(91.66667% - 20px);
+  }
+
+  .col-11nm, .col-11nmr {
+    width: 91.66667%;
+  }
+
+  .col-12, .col-12r {
+    width: calc(100% - 20px);
+  }
+
+  .col-12nm, .col-12nmr {
+    width: 100%;
+  }
+
+  .col-1by5, .col-1by5r {
+    width: calc(20% - 20px);
+  }
+
+  .col-1by5nm, .col-1by5nmr {
+    width: 20%;
+  }
+
+  .col-2by5, .col-2by5r {
+    width: calc(40% - 20px);
+  }
+
+  .col-2by5nm, .col-2by5nmr {
+    width: 40%;
+  }
+
+  .col-3by5, .col-3by5r {
+    width: calc(60% - 20px);
+  }
+
+  .col-3by5nm, .col-3by5nmr {
+    width: 60%;
+  }
+
+  .col-4by5, .col-4by5r {
+    width: calc(80% - 20px);
+  }
+
+  .col-4by5nm, .col-4by5nmr {
+    width: 80%;
+  }
+
+  .col-1by7, .col-1by7r {
+    width: calc(14.28571% - 20px);
+  }
+
+  .col-1by7nm, .col-1by7nmr {
+    width: 14.28571%;
+  }
+
+  .col-2by7, .col-2by7r {
+    width: calc(28.57143% - 20px);
+  }
+
+  .col-2by7nm, .col-2by7nmr {
+    width: 28.57143%;
+  }
+
+  .col-3by7, .col-3by7r {
+    width: calc(42.85714% - 20px);
+  }
+
+  .col-3by7nm, .col-3by7nmr {
+    width: 42.85714%;
+  }
+
+  .col-4by7, .col-4by7r {
+    width: calc(57.14286% - 20px);
+  }
+
+  .col-4by7nm, .col-4by7nmr {
+    width: 57.14286%;
+  }
+
+  .col-5by7, .col-5by7r {
+    width: calc(71.42857% - 20px);
+  }
+
+  .col-5by7nm, .col-5by7nmr {
+    width: 71.42857%;
+  }
+
+  .col-6by7, .col-6by7r {
+    width: calc(85.71429% - 20px);
+  }
+
+  .col-6by7nm, .col-6by7nmr {
+    width: 85.71429%;
+  }
+
+  .col-pc-1, .col-pc-1r {
+    width: calc(8.33333% - 20px);
+  }
+
+  .col-pc-1nm, .col-pc-1nmr {
+    width: 8.33333%;
+  }
+
+  .col-pc-2, .col-pc-2r {
+    width: calc(16.66667% - 20px);
+  }
+
+  .col-pc-2nm, .col-pc-2nmr {
+    width: 16.66667%;
+  }
+
+  .col-pc-3, .col-pc-3r {
+    width: calc(25% - 20px);
+  }
+
+  .col-pc-3nm, .col-pc-3nmr {
+    width: 25%;
+  }
+
+  .col-pc-4, .col-pc-4r {
+    width: calc(33.33333% - 20px);
+  }
+
+  .col-pc-4nm, .col-pc-4nmr {
+    width: 33.33333%;
+  }
+
+  .col-pc-5, .col-pc-5r {
+    width: calc(41.66667% - 20px);
+  }
+
+  .col-pc-5nm, .col-pc-5nmr {
+    width: 41.66667%;
+  }
+
+  .col-pc-6, .col-pc-6r {
+    width: calc(50% - 20px);
+  }
+
+  .col-pc-6nm, .col-pc-6nmr {
+    width: 50%;
+  }
+
+  .col-pc-7, .col-pc-7r {
+    width: calc(58.33333% - 20px);
+  }
+
+  .col-pc-7nm, .col-pc-7nmr {
+    width: 58.33333%;
+  }
+
+  .col-pc-8, .col-pc-8r {
+    width: calc(66.66667% - 20px);
+  }
+
+  .col-pc-8nm, .col-pc-8nmr {
+    width: 66.66667%;
+  }
+
+  .col-pc-9, .col-pc-9r {
+    width: calc(75% - 20px);
+  }
+
+  .col-pc-9nm, .col-pc-9nmr {
+    width: 75%;
+  }
+
+  .col-pc-10, .col-pc-10r {
+    width: calc(83.33333% - 20px);
+  }
+
+  .col-pc-10nm, .col-pc-10nmr {
+    width: 83.33333%;
+  }
+
+  .col-pc-11, .col-pc-11r {
+    width: calc(91.66667% - 20px);
+  }
+
+  .col-pc-11nm, .col-pc-11nmr {
+    width: 91.66667%;
+  }
+
+  .col-pc-12, .col-pc-12r {
+    width: calc(100% - 20px);
+  }
+
+  .col-pc-12nm, .col-pc-12nmr {
+    width: 100%;
+  }
+
+  .col-pc-1by5, .col-pc-1by5r {
+    width: calc(20% - 20px);
+  }
+
+  .col-pc-1by5nm, .col-pc-1by5nmr {
+    width: 20%;
+  }
+
+  .col-pc-2by5, .col-pc-2by5r {
+    width: calc(40% - 20px);
+  }
+
+  .col-pc-2by5nm, .col-pc-2by5nmr {
+    width: 40%;
+  }
+
+  .col-pc-3by5, .col-pc-3by5r {
+    width: calc(60% - 20px);
+  }
+
+  .col-pc-3by5nm, .col-pc-3by5nmr {
+    width: 60%;
+  }
+
+  .col-pc-4by5, .col-pc-4by5r {
+    width: calc(80% - 20px);
+  }
+
+  .col-pc-4by5nm, .col-pc-4by5nmr {
+    width: 80%;
+  }
+
   .col-pc-1by7, .col-pc-1by7r {
     width: calc(14.28571% - 20px);
+  }
+
+  .col-pc-1by7nm, .col-pc-1by7nmr {
+    width: 14.28571%;
   }
 
   .col-pc-2by7, .col-pc-2by7r {
     width: calc(28.57143% - 20px);
   }
 
+  .col-pc-2by7nm, .col-pc-2by7nmr {
+    width: 28.57143%;
+  }
+
   .col-pc-3by7, .col-pc-3by7r {
     width: calc(42.85714% - 20px);
+  }
+
+  .col-pc-3by7nm, .col-pc-3by7nmr {
+    width: 42.85714%;
   }
 
   .col-pc-4by7, .col-pc-4by7r {
     width: calc(57.14286% - 20px);
   }
 
+  .col-pc-4by7nm, .col-pc-4by7nmr {
+    width: 57.14286%;
+  }
+
   .col-pc-5by7, .col-pc-5by7r {
     width: calc(71.42857% - 20px);
   }
 
+  .col-pc-5by7nm, .col-pc-5by7nmr {
+    width: 71.42857%;
+  }
+
   .col-pc-6by7, .col-pc-6by7r {
     width: calc(85.71429% - 20px);
+  }
+
+  .col-pc-6by7nm, .col-pc-6by7nmr {
+    width: 85.71429%;
   }
 }
 .flex {
@@ -1619,6 +2208,22 @@ nav, nav ul, nav li {
   margin-left: -5px;
 }
 
+.flex-nm {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: stretch;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
 .flex-r {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1633,6 +2238,22 @@ nav, nav ul, nav li {
   flex-wrap: wrap;
   width: calc(100% + 10px);
   margin-left: -5px;
+}
+
+.flex-nmr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: stretch;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
 }
 
 .flex-sp-eq {
